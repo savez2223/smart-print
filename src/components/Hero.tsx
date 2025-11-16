@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import img1 from "../images/sps-1.png";
 import img2 from "../images/sps-2.png";
@@ -9,6 +10,7 @@ const sliderImages = [img1, img2];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   const next = () => {
     setIndex((prev) => (prev + 1) % sliderImages.length);
@@ -40,6 +42,7 @@ const Hero = () => {
               setting up, customizing, and registering your device.
             </p>
             <Button
+              onClick={() => navigate("/printer-setup")}
               className="
     bg-[#00a9ff] 
     hover:bg-[#029ce8] 
