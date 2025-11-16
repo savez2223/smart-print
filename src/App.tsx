@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PrinterSetup from "./pages/PrinterSetup";
+import PrinterSetupDetails from "./pages/PrinterSetupDetails";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/printer-setup" element={<PrinterSetup />} />
+        <Route path="/printer-setup-details" element={<PrinterSetupDetails />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

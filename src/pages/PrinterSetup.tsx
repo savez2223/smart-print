@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Check } from "lucide-react";
@@ -8,8 +9,15 @@ import tshirtPrinter from "../assets/tshirt-printer.jpg";
 import tshirtWoman from "../assets/tshirt-woman.jpg";
 
 const PrinterSetup = () => {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [showList, setShowList] = useState(false);
+
+  const handleSearch = () => {
+    if (query.trim()) {
+      navigate("/printer-setup-details", { state: { printerModel: query } });
+    }
+  };
 
   const printerModels = [
     // HP Printers
@@ -155,6 +163,7 @@ const PrinterSetup = () => {
 
                   <Button
                     size="lg"
+                    onClick={handleSearch}
                     className="bg-primary hover:bg-primary/90 text-white px-8"
                   >
                     <Search className="mr-2 h-5 w-5" />
