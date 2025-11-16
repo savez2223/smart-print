@@ -1,39 +1,88 @@
 import { Button } from "@/components/ui/button";
-import printAnywhere from "@/assets/print-anywhere.png";
+import printAnywhere from "../images/printany.png"; // Update path as needed
 
 const PrintAnywhere = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 bg-background">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
+        <div className="grid lg:grid-cols-2 gap-0 items-center">
+          {/* Left: Image */}
+          <div className="flex flex-col items-center justify-center">
             <img
               src={printAnywhere}
               alt="Print Anywhere"
-              className="max-w-full h-auto rounded-lg"
+              className="w-80 h-auto rounded-lg"
+              // Reduce width slightly to help balance the grid
             />
           </div>
+          {/* Right: Text content */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-4xl font-bold text-sky-500">
               Print Anywhere and Anytime
             </h2>
-            <p className="text-muted-foreground">
-              PRINTING FROM ANOTHER ROOM HAS NEVER BEEN SO EASY
-            </p>
-            <div className="space-y-4 text-muted-foreground">
+            <h3 className="text-2xl font-semibold text-primary">
+              Maximize Your Printer with Updated Drivers
+            </h3>
+            <div className="space-y-4 text-base text-foreground font-medium">
               <p>
-                Gone are the days when you could only print from a computer attached to your printer. Now, your favorite device 
-                is a remote printing machine. Moreover, managing the print queues on your computer will be a thing of the past. 
-                It requires less investment and is able to provide you with printing flexibility that you'll love.
+                Smart Printer Setup is your all-in-one solution for fast, smooth
+                printing from any desktop, laptop, or mobile device to any
+                printer, no significance the network in between. It is created
+                to cater to homes and organizations of all sizes. Our software
+                delivers centralized management and is ideal for both simple and
+                complex workflows. Via Smart Printer Setup, you acquire the
+                flexibility to operate your printing services on-premise or in
+                the cloud, guaranteeing your printing demands are met now and in
+                the future.
               </p>
-              <p>
-                Go wireless with our printer setup. By using a wireless network, you can print from your iPad, tablets, laptops, 
-                and your smartphones at ease and with utmost flexibility. The setup is quick and easy, requiring minimal support. 
-                It is necessary to have a proper Wi-Fi network setup at home. Try printing wirelessly by following the simple instructions.
+              <p className="text-xs text-muted-foreground">
+                Smart-Print is a self-dependent solution provider for software
+                products. By downloading Smart Printer Support, you agree to our{" "}
+                <a
+                  href="https://pcpackard.com/privacy-policy"
+                  className="underline"
+                >
+                  Privacy Policy
+                </a>
+                ,{" "}
+                <a
+                  href="https://pcpackard.com/terms-condition"
+                  className="underline"
+                >
+                  Terms and Conditions
+                </a>{" "}
+                and{" "}
+                <a href="https://pcpackard.com/eula" className="underline">
+                  EULA
+                </a>
+                . Complete access to management features and printer
+                troubleshooting requires an $11.99 monthly subscription, with
+                more premium assistance available via upgrades. All names and
+                trademarks cited are for reference purposes only, and no
+                affiliation is indicated with any third-party companies. Smart
+                Printer Help DOES NOT sell or supply third-party technical
+                support.
               </p>
             </div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Setup Printer Now
+            <Button
+              size="lg"
+              className="
+    bg-primary
+    text-primary-foreground
+    shadow-lg
+    transition-all
+    duration-150
+    ease-in-out
+    hover:shadow-[0_8px_32px_0_rgba(0,164,255,0.30),0_0_0_8px_rgba(0,164,255,0.1)]
+    hover:-translate-y-1
+    hover:bg-primary/95
+    relative
+    "
+              style={{
+                boxShadow: "0 4px 24px 0 rgba(0,164,255,0.18)",
+              }}
+            >
+              Contact for Download
             </Button>
           </div>
         </div>
