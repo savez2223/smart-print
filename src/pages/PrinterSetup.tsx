@@ -1,56 +1,197 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Check } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import bgImage from "../assets/printer-setup-bg.png";
+import bgImage from "../images/setup-bg.jpg";
 import tshirtPrinter from "../assets/tshirt-printer.jpg";
 import tshirtWoman from "../assets/tshirt-woman.jpg";
 
 const PrinterSetup = () => {
+  const [query, setQuery] = useState("");
+  const [showList, setShowList] = useState(false);
+
+  const printerModels = [
+    // HP Printers
+    "HP LaserJet 1020",
+    "HP LaserJet 1022",
+    "HP LaserJet 1150",
+    "HP LaserJet 1200",
+    "HP LaserJet 1300",
+    "HP LaserJet 1320",
+    "HP LaserJet 2100",
+    "HP LaserJet 4000",
+    "HP LaserJet 4050",
+    "HP LaserJet 4100",
+    "HP LaserJet 4200",
+    "HP LaserJet 4250",
+    "HP LaserJet 4300",
+    "HP LaserJet 4350",
+    "HP LaserJet Pro M402dn",
+    "HP MFP M200",
+    "HP LaserJet Pro M501",
+    "HP OfficeJet Pro 8020",
+    "HP OfficeJet Pro 8135e",
+    "HP OfficeJet Pro 9125e",
+    "HP DeskJet 1050A",
+    "HP DeskJet 1510",
+    "HP DeskJet Ink Advantage 2135",
+    "HP DeskJet 2331", // नया ऐड किया गया मॉडल
+    "HP Color LaserJet M254",
+    "HP LaserJet Pro M508",
+
+    // Canon Printers
+    "Canon Pixma G1000",
+    "Canon Pixma G1010",
+    "Canon Pixma G1020",
+    "Canon Pixma G2000",
+    "Canon Pixma G2010",
+    "Canon Pixma G2020",
+    "Canon Pixma G3000",
+    "Canon Pixma G3010",
+    "Canon Pixma G3020",
+    "Canon Pixma G4000",
+    "Canon Pixma MG2540",
+    "Canon Pixma E400",
+    "Canon Pixma E470",
+    "Canon LBP2900B",
+    "Canon LBP7018C",
+    "Canon MF3010",
+    "Canon imageCLASS MF244dw",
+
+    // Epson Printers
+    "Epson EcoTank L220",
+    "Epson EcoTank L355",
+    "Epson EcoTank L380",
+    "Epson EcoTank L395",
+    "Epson EcoTank L455",
+    "Epson EcoTank L310",
+    "Epson EcoTank L3110",
+    "Epson EcoTank L3150",
+    "Epson EcoTank L3160",
+    "Epson EcoTank L3250",
+    "Epson EcoTank L3210",
+    "Epson L1300",
+    "Epson ET-4700",
+    "Epson ET-4800",
+
+    // Brother Printers
+    "Brother HL-L2321D",
+    "Brother HL-L2351DW",
+    "Brother HL-B2000D",
+    "Brother DCP-T510W",
+    "Brother DCP-T520W",
+    "Brother DCP-T710W",
+    "Brother DCP-T820DW",
+    "Brother MFC-L2700D",
+
+    // Samsung Printers
+    "Samsung Xpress M2021",
+    "Samsung Xpress M2070",
+    "Samsung Xpress M2071",
+    "Samsung ML-2161",
+    "Samsung ML-1860",
+    "Samsung CLX-6260",
+
+    // Ricoh Printers
+    "Ricoh SP 210SU",
+    "Ricoh SP 100",
+    "Ricoh SP 111",
+
+    // Kyocera Printers
+    "Kyocera Ecosys FS-1120MFP",
+    "Kyocera FS-1025",
+    "Kyocera FS-1040",
+    "Kyocera FS-1060DN",
+
+    // Xerox Printers
+    "Xerox Phaser 3020",
+    "Xerox Phaser 3260",
+    "Xerox WorkCentre 3025",
+    "Xerox WorkCentre 3215",
+  ];
+
+  const filtered = printerModels.filter((item) =>
+    item.toLowerCase().includes(query.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
-        {/* Hero Section with Background Image */}
-        <section 
-          className="relative py-32 bg-cover bg-center"
+        {/* Hero Section with Background */}
+        <section
+          className="relative py-10 bg-cover bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
+
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl">
               <h1 className="text-5xl font-bold text-white mb-6">
                 Discover the Right Printer Software
               </h1>
               <p className="text-lg text-white/90 mb-4">
-                From design tools to print management and driver updates — everything you need for flawless t-shirt printing is right here.
+                From design tools to print management and driver updates —
+                everything you need for flawless t-shirt printing is right here.
               </p>
               <p className="text-lg text-white/90 mb-8">
-                Just enter your printer model to get started and find the perfect match for your setup.
+                Just enter your printer model to get started and find the
+                perfect match for your setup.
               </p>
-              
-              {/* Search Bar */}
-              <div className="flex gap-3">
-                <Input 
-                  type="text"
-                  placeholder='Enter your printer model number. Ex: "Laserjet Pro 400"'
-                  className="flex-1 h-12 text-base bg-white"
-                />
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8"
-                >
-                  <Search className="mr-2 h-5 w-5" />
-                  Search
-                </Button>
+
+              {/* Search Bar + Suggestions */}
+              <div className="relative">
+                <div className="flex gap-3">
+                  <Input
+                    type="text"
+                    value={query}
+                    onChange={(e) => {
+                      setQuery(e.target.value);
+                      setShowList(true);
+                    }}
+                    placeholder='Enter your printer model. Ex: "Laserjet Pro 400"'
+                    className="flex-1 h-12 text-base bg-white"
+                  />
+
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-white px-8"
+                  >
+                    <Search className="mr-2 h-5 w-5" />
+                    Search
+                  </Button>
+                </div>
+
+                {/* Suggestions Dropdown */}
+                {showList && query.length > 0 && (
+                  <div className="absolute z-20 bg-white w-full mt-2 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                    {filtered.length > 0 ? (
+                      filtered.map((model, index) => (
+                        <div
+                          key={index}
+                          onClick={() => {
+                            setQuery(model);
+                            setShowList(false);
+                          }}
+                          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700"
+                        >
+                          {model}
+                        </div>
+                      ))
+                    ) : (
+                      <div className="px-4 py-3 text-gray-500">
+                        No matching printer found
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </section>
 
         {/* Why Opt Section */}
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -58,8 +199,12 @@ const PrinterSetup = () => {
                   Why Opt for Our T-Shirt Printing Software?
                 </h2>
                 <p className="text-gray-700 mb-8">
-                  Choosing the right software isn't just about convenience—it's about unlocking your full creative potential. Whether you're just starting out or running a print business, our software helps you deliver stunning results with speed and precision.
+                  Choosing the right software isn't just about convenience— it’s
+                  about unlocking your full creative potential. Whether you're
+                  just starting out or running a print business, our software
+                  helps you deliver stunning results with speed and precision.
                 </p>
+
                 <ul className="space-y-4">
                   {[
                     "Smooth compatibility with a wide range of printer models",
@@ -67,7 +212,7 @@ const PrinterSetup = () => {
                     "Intuitive design tools for effortless customization",
                     "Supports various file formats for maximum flexibility",
                     "Smart print settings to save time, ink, and materials",
-                    "Frequent updates packed with new features and enhancements"
+                    "Frequent updates packed with new features and enhancements",
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="mt-1 bg-primary rounded p-1">
@@ -78,10 +223,11 @@ const PrinterSetup = () => {
                   ))}
                 </ul>
               </div>
+
               <div>
-                <img 
-                  src={tshirtPrinter} 
-                  alt="T-shirt printing machine in action"
+                <img
+                  src={tshirtPrinter}
+                  alt="T-shirt printing machine"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
@@ -89,33 +235,38 @@ const PrinterSetup = () => {
           </div>
         </section>
 
-        {/* Kickstart Journey Section */}
-        <section className="py-16 bg-gray-50">
+        {/* Journey Section */}
+        <section className="py-10 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <img 
-                  src={tshirtWoman} 
-                  alt="Woman holding custom printed t-shirt"
+                <img
+                  src={tshirtWoman}
+                  alt="Woman with custom T-shirt"
                   className="rounded-lg shadow-lg w-full"
                 />
               </div>
+
               <div>
                 <h2 className="text-4xl font-bold text-primary mb-6">
                   Kickstart Your Journey with T-Shirt Printing Software
                 </h2>
                 <p className="text-gray-700 mb-6">
-                  Take your t-shirt printing to the next level with powerful, easy-to-use software. Whether you're just starting out or already a pro, the right tools help you achieve accurate designs, bold colors, and a smooth workflow every time.
+                  Take your t-shirt printing to the next level with powerful,
+                  easy-to-use software. Whether you're just starting out or
+                  already a pro, the right tools help you achieve accurate
+                  designs, bold colors, and a smooth workflow every time.
                 </p>
+
                 <p className="text-gray-700 mb-6">
-                  T-shirt printing software empowers you to craft custom designs, fine-tune color settings, and optimize prints for stunning results. From DTG and DTF to screen printing and sublimation, the right software streamlines your process and boosts print quality.
+                  Enjoy features like intelligent design adjustments, wide
+                  printer compatibility, and user-friendly interfaces that put
+                  creativity and control at your fingertips.
                 </p>
-                <p className="text-gray-700 mb-8">
-                  Enjoy features like intelligent design adjustments, wide printer compatibility, and user-friendly interfaces that put creativity and control at your fingertips. Turn your apparel ideas into reality—faster, easier, and more precisely than ever.
-                </p>
-                <Button 
+
+                <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white"
+                  className="bg-primary text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-md"
                 >
                   Chat With Us
                 </Button>
@@ -123,8 +274,9 @@ const PrinterSetup = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
