@@ -238,7 +238,7 @@ const PrinterSetupDetails = () => {
                     <img
                       src={usbConnection}
                       alt="USB connection diagram"
-                      className="w-48 mx-auto"
+                      className="w-full max-w-md mx-auto rounded-lg"
                     />
                   )}
                 </div>
