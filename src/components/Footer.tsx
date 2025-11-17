@@ -1,6 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer
+      style={{
+        background: "linear-gradient(90deg, #005bb5 0%, #00c5ff 100%)",
+      }}
+      className="text-primary-foreground py-12"
+    >
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -94,7 +99,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">
           <p>
-            &copy; 2024 Smart-Print. All rights reserved. | Privacy Policy |
+            &copy; 2025 Smart-Print. All rights reserved. | Privacy Policy |
             Terms & Conditions
           </p>
         </div>

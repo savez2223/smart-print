@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Search, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import bgImage from "../images/setup-bg.jpg";
-import tshirtPrinter from "../assets/tshirt-printer.jpg";
-import tshirtWoman from "../assets/tshirt-woman.jpg";
+import tshirtPrinter from "../images/print-s1.jpg";
+import tshirtWoman from "../images/print-s2.jpg";
 
 const PrinterSetup = () => {
   const navigate = useNavigate();
@@ -202,42 +202,48 @@ const PrinterSetup = () => {
         {/* Why Opt Section */}
         <section className="py-10 bg-white">
           <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-primary mb-6">
-                  Why Opt for Our T-Shirt Printing Software?
-                </h2>
-                <p className="text-gray-700 mb-8">
-                  Choosing the right software isn't just about convenience— it’s
-                  about unlocking your full creative potential. Whether you're
-                  just starting out or running a print business, our software
-                  helps you deliver stunning results with speed and precision.
-                </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-stretch min-h-[420px]">
+              {/* Text Column */}
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h2 className="text-4xl font-bold text-primary mb-6">
+                    Why Opt for Our T-Shirt Printing Software?
+                  </h2>
 
-                <ul className="space-y-4">
-                  {[
-                    "Smooth compatibility with a wide range of printer models",
-                    "Pro-level color control for eye-catching, vibrant prints",
-                    "Intuitive design tools for effortless customization",
-                    "Supports various file formats for maximum flexibility",
-                    "Smart print settings to save time, ink, and materials",
-                    "Frequent updates packed with new features and enhancements",
-                  ].map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="mt-1 bg-primary rounded p-1">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <p className="text-gray-700 mb-8">
+                    Choosing the right software isn't just about convenience—
+                    it’s about unlocking your full creative potential. Whether
+                    you're just starting out or running a print business, our
+                    software helps you deliver stunning results with speed and
+                    precision.
+                  </p>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Smooth compatibility with a wide range of printer models",
+                      "Pro-level color control for eye-catching, vibrant prints",
+                      "Intuitive design tools for effortless customization",
+                      "Supports various file formats for maximum flexibility",
+                      "Smart print settings to save time, ink, and materials",
+                      "Frequent updates packed with new features and enhancements",
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="mt-1 bg-primary rounded p-1">
+                          <Check className="h-4 w-4 text-white" />
+                        </div>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div>
+              {/* Image Column */}
+              <div className="h-full">
                 <img
                   src={tshirtPrinter}
                   alt="T-shirt printing machine"
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -247,35 +253,42 @@ const PrinterSetup = () => {
         {/* Journey Section */}
         <section className="py-10 bg-gray-50">
           <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+            <div className="grid lg:grid-cols-2 gap-12 items-stretch min-h-[420px]">
+              {/* Image Column */}
+              <div className="h-full">
                 <img
                   src={tshirtWoman}
                   alt="Woman with custom T-shirt"
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full h-full object-cover"
                 />
               </div>
 
-              <div>
-                <h2 className="text-4xl font-bold text-primary mb-6">
-                  Kickstart Your Journey with T-Shirt Printing Software
-                </h2>
-                <p className="text-gray-700 mb-6">
-                  Take your t-shirt printing to the next level with powerful,
-                  easy-to-use software. Whether you're just starting out or
-                  already a pro, the right tools help you achieve accurate
-                  designs, bold colors, and a smooth workflow every time.
-                </p>
+              {/* Text Column */}
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h2 className="text-4xl font-bold text-primary mb-6">
+                    Kickstart Your Journey with T-Shirt Printing Software
+                  </h2>
 
-                <p className="text-gray-700 mb-6">
-                  Enjoy features like intelligent design adjustments, wide
-                  printer compatibility, and user-friendly interfaces that put
-                  creativity and control at your fingertips.
-                </p>
+                  <p className="text-gray-700 mb-6">
+                    Take your t-shirt printing to the next level with powerful,
+                    easy-to-use software. Whether you're just starting out or
+                    already a pro, the right tools help you achieve accurate
+                    designs, bold colors, and a smooth workflow every time.
+                  </p>
+
+                  <p className="text-gray-700 mb-6">
+                    Enjoy features like intelligent design adjustments, wide
+                    printer compatibility, and user-friendly interfaces that put
+                    creativity and control at your fingertips.
+                  </p>
+                </div>
 
                 <Button
                   size="lg"
-                  className="bg-primary text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-md"
+                  className="bg-primary text-white transition-all duration-300 
+          hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 
+          active:translate-y-0 active:shadow-md w-fit"
                 >
                   Chat With Us
                 </Button>

@@ -5,11 +5,12 @@ import { Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import printerWireless from "../assets/printer-wireless.png";
 import usbConnection from "../assets/usb-connection.png";
-import supportAgent from "../assets/support-agent.png";
-import setupDownload from "../assets/setup-download.png";
-import setupConnect from "../assets/setup-connect.png";
-import setupInstall from "../assets/setup-install.png";
-import setupTest from "../assets/setup-test.png";
+import supportAgent from "../images/cont-down1.jpg";
+import supportAgent2 from "../images/cont-down2.jpg";
+import setupDownload from "../images/psoft-1.jpg";
+import setupConnect from "../images/psoft-2.jpg";
+import setupInstall from "../images/psoft-3.jpg";
+import setupTest from "../images/psoft-4.jpg";
 
 const PrinterSetupDetails = () => {
   const location = useLocation();
@@ -18,22 +19,26 @@ const PrinterSetupDetails = () => {
   const setupSteps = [
     {
       title: "Download the Latest Software",
-      description: "Download the most up-to-date drivers and printer software compatible with your system.",
+      description:
+        "Download the most up-to-date drivers and printer software compatible with your system.",
       image: setupDownload,
     },
     {
       title: "Connect Your Printer",
-      description: "Link your printer to a USB cable or Wi-Fi via the printer's wireless setup options.",
+      description:
+        "Link your printer to a USB cable or Wi-Fi via the printer's wireless setup options.",
       image: setupConnect,
     },
     {
       title: "Install the Printer Drivers",
-      description: "Follow the on-screen prompts to complete the setup process.",
+      description:
+        "Follow the on-screen prompts to complete the setup process.",
       image: setupInstall,
     },
     {
       title: "Test the Printer",
-      description: "Once installation is complete, print a test page to confirm your printer is working.",
+      description:
+        "Once installation is complete, print a test page to confirm your printer is working.",
       image: setupTest,
     },
   ];
@@ -42,7 +47,8 @@ const PrinterSetupDetails = () => {
     {
       step: 1,
       title: "Reconnect the USB Cable Properly",
-      description: "Ensure a secure physical connection between your printer and computer.",
+      description:
+        "Ensure a secure physical connection between your printer and computer.",
       points: [
         "Unplug the USB cable from both the printer and the computer.",
         "Wait a few seconds before reconnecting.",
@@ -119,7 +125,8 @@ const PrinterSetupDetails = () => {
     {
       step: 8,
       title: "Clear Temporary Files",
-      description: "Clean out junk files that might interfere with installation.",
+      description:
+        "Clean out junk files that might interfere with installation.",
       points: [
         "Search for and open Disk Cleanup.",
         "Choose your system drive (usually C:).",
@@ -150,17 +157,26 @@ const PrinterSetupDetails = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl font-bold text-primary mb-6">
-                  Fix Your {printerModel} Printer Software
+                  Fix Your{" "}
+                  <span style={{ color: "#005bb5" }}>{printerModel}</span>{" "}
+                  Printer Software
                 </h1>
+
                 <p className="text-lg text-foreground/80 mb-8">
                   Use our detailed instructions to install and setup your{" "}
-                  {printerModel} printer with ease. We offer the appropriate
-                  answers whether you're troubleshooting or setting up for the
-                  first time.
+                  <span style={{ color: "#000f8f", fontWeight: "bold" }}>
+                    {printerModel}
+                  </span>{" "}
+                  printer with ease. We offer the appropriate answers whether
+                  you're troubleshooting or setting up for the first time.
                 </p>
 
                 <ul className="space-y-3 mb-8">
-                  {["Easy & Fast Installation", "Both Windows and macOS compatible", "Current Software & Driver Updates"].map((feature, index) => (
+                  {[
+                    "Easy & Fast Installation",
+                    "Both Windows and macOS compatible",
+                    "Current Software & Driver Updates",
+                  ].map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <div className="bg-primary rounded p-1">
                         <Check className="h-4 w-4 text-white" />
@@ -170,8 +186,11 @@ const PrinterSetupDetails = () => {
                   ))}
                 </ul>
 
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg">
-                  CLICK TO FIX
+                <Button
+                  size="lg"
+                  className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg ml-16"
+                >
+                  Chat With Us
                 </Button>
               </div>
 
@@ -198,16 +217,21 @@ const PrinterSetupDetails = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {setupSteps.map((step, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-md border-border/50">
-                  <img 
-                    src={step.image} 
+                <Card
+                  key={index}
+                  className="p-6 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-md border-border/50"
+                >
+                  <img
+                    src={step.image}
                     alt={step.title}
                     className="w-full h-40 object-cover rounded-lg mb-4"
                   />
                   <h3 className="text-xl font-semibold text-primary mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-foreground/70">{step.description}</p>
+                  <p className="text-sm text-foreground/70">
+                    {step.description}
+                  </p>
                 </Card>
               ))}
             </div>
@@ -264,7 +288,7 @@ const PrinterSetupDetails = () => {
                 <img
                   src={supportAgent}
                   alt="Live chat support"
-                  className="w-full h-48 object-cover rounded-lg mb-6"
+                  className="w-full h-48 object-fit rounded-lg mb-6"
                 />
                 <h3 className="text-2xl font-bold text-primary mb-3">
                   Live Chat Assistance
@@ -280,12 +304,12 @@ const PrinterSetupDetails = () => {
 
               <Card className="p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg border-border/50">
                 <img
-                  src={supportAgent}
+                  src={supportAgent2}
                   alt="Printer help support"
-                  className="w-full h-48 object-cover rounded-lg mb-6"
+                  className="w-full h-48 object-fit rounded-lg mb-6"
                 />
                 <h3 className="text-2xl font-bold text-primary mb-3">
-                  PC Packard Printer Help
+                  Smart-Print Printer Help
                 </h3>
                 <p className="text-foreground/70 mb-6">
                   Get clear, easy-to-follow support for installing software,
