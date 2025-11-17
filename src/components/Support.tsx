@@ -20,7 +20,7 @@ const Support = () => {
               className="max-w-full h-auto rounded-lg"
             />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-7">
             <p className="text-muted-foreground">
               Our dedicated support team is available 24/7 to help you with any
               printer setup issues. Whether you're setting up your first printer
