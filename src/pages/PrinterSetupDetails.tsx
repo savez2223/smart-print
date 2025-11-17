@@ -170,7 +170,7 @@ const PrinterSetupDetails = () => {
                   ))}
                 </ul>
 
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg">
                   CLICK TO FIX
                 </Button>
               </div>
@@ -273,7 +273,7 @@ const PrinterSetupDetails = () => {
                   Connect with our team through live chat for step-by-step
                   guidance in real time.
                 </p>
-                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-lg transition-all">
+                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-md">
                   Chat Now
                 </Button>
               </Card>
@@ -291,7 +291,7 @@ const PrinterSetupDetails = () => {
                   Get clear, easy-to-follow support for installing software,
                   updating drivers, and resolving common issues.
                 </p>
-                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-lg transition-all">
+                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-md">
                   Contact Us
                 </Button>
               </Card>
