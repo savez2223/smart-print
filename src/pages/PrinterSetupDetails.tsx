@@ -6,6 +6,10 @@ import Footer from "@/components/Footer";
 import printerWireless from "../assets/printer-wireless.png";
 import usbConnection from "../assets/usb-connection.png";
 import supportAgent from "../assets/support-agent.png";
+import setupDownload from "../assets/setup-download.png";
+import setupConnect from "../assets/setup-connect.png";
+import setupInstall from "../assets/setup-install.png";
+import setupTest from "../assets/setup-test.png";
 
 const PrinterSetupDetails = () => {
   const location = useLocation();
@@ -15,22 +19,22 @@ const PrinterSetupDetails = () => {
     {
       title: "Download the Latest Software",
       description: "Download the most up-to-date drivers and printer software compatible with your system.",
-      icon: "📥",
+      image: setupDownload,
     },
     {
       title: "Connect Your Printer",
       description: "Link your printer to a USB cable or Wi-Fi via the printer's wireless setup options.",
-      icon: "🔌",
+      image: setupConnect,
     },
     {
       title: "Install the Printer Drivers",
       description: "Follow the on-screen prompts to complete the setup process.",
-      icon: "⚙️",
+      image: setupInstall,
     },
     {
       title: "Test the Printer",
       description: "Once installation is complete, print a test page to confirm your printer is working.",
-      icon: "✅",
+      image: setupTest,
     },
   ];
 
@@ -194,8 +198,12 @@ const PrinterSetupDetails = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {setupSteps.map((step, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="text-5xl mb-4">{step.icon}</div>
+                <Card key={index} className="p-6 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-md border-border/50">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-40 object-cover rounded-lg mb-4"
+                  />
                   <h3 className="text-xl font-semibold text-primary mb-3">
                     {step.title}
                   </h3>
@@ -211,7 +219,7 @@ const PrinterSetupDetails = () => {
           <div className="container mx-auto px-6 max-w-4xl">
             {troubleshootingSteps.map((item) => (
               <div key={item.step} className="mb-12">
-                <div className="bg-white rounded-lg p-8 shadow-md">
+                <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-border/30">
                   <h3 className="text-2xl font-bold text-primary mb-3">
                     Step {item.step}: {item.title}
                   </h3>
@@ -252,7 +260,7 @@ const PrinterSetupDetails = () => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="p-8 text-center hover:shadow-xl transition-shadow">
+              <Card className="p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg border-border/50">
                 <img
                   src={supportAgent}
                   alt="Live chat support"
@@ -265,12 +273,12 @@ const PrinterSetupDetails = () => {
                   Connect with our team through live chat for step-by-step
                   guidance in real time.
                 </p>
-                <Button className="bg-primary text-white hover:bg-primary/90">
+                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-lg transition-all">
                   Chat Now
                 </Button>
               </Card>
 
-              <Card className="p-8 text-center hover:shadow-xl transition-shadow">
+              <Card className="p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg border-border/50">
                 <img
                   src={supportAgent}
                   alt="Printer help support"
@@ -283,7 +291,7 @@ const PrinterSetupDetails = () => {
                   Get clear, easy-to-follow support for installing software,
                   updating drivers, and resolving common issues.
                 </p>
-                <Button className="bg-primary text-white hover:bg-primary/90">
+                <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-lg transition-all">
                   Contact Us
                 </Button>
               </Card>
