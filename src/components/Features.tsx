@@ -47,7 +47,7 @@ const features = [
     icon: Layers,
     title: "Scalable and Flexible",
     description:
-      "Smart-Print Smart Printer Setup evolves with your enterprise. It’s modular, authorizing you to add or subtract elements as your needs develop, and supports both cloud deployments and on-premise.",
+      "Smart-Print Smart Printer Setup evolves with your enterprise. It’s modular, authorizing you to add or subtract elements as your needs develop, and Guides both cloud deployments and on-premise.",
   },
   {
     icon: Repeat,

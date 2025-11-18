@@ -5,12 +5,13 @@ import { Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import printerWireless from "../assets/printer-wireless.png";
 import usbConnection from "../assets/usb-connection.png";
-import supportAgent from "../images/cont-down1.jpg";
-import supportAgent2 from "../images/cont-down2.jpg";
+import GuideAgent from "../images/cont-down1.jpg";
+import GuideAgent2 from "../images/cont-down2.jpg";
 import setupDownload from "../images/psoft-1.jpg";
 import setupConnect from "../images/psoft-2.jpg";
 import setupInstall from "../images/psoft-3.jpg";
 import setupTest from "../images/psoft-4.jpg";
+import Disc from "@/components/Disc";
 
 const PrinterSetupDetails = () => {
   const location = useLocation();
@@ -275,7 +276,7 @@ const PrinterSetupDetails = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-bold text-center text-primary mb-4">
-              Solutions for Printer Software Support
+              Solutions for Printer Software Guide
             </h2>
             <p className="text-center text-foreground/70 mb-12">
               Are you experiencing issues with your printer software? We provide
@@ -286,8 +287,8 @@ const PrinterSetupDetails = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg border-border/50">
                 <img
-                  src={supportAgent}
-                  alt="Live chat support"
+                  src={GuideAgent}
+                  alt="Live chat Guide"
                   className="w-full h-48 object-fit rounded-lg mb-6"
                 />
                 <h3 className="text-2xl font-bold text-primary mb-3">
@@ -304,15 +305,15 @@ const PrinterSetupDetails = () => {
 
               <Card className="p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 shadow-lg border-border/50">
                 <img
-                  src={supportAgent2}
-                  alt="Printer help support"
+                  src={GuideAgent2}
+                  alt="Printer help Guide"
                   className="w-full h-48 object-fit rounded-lg mb-6"
                 />
                 <h3 className="text-2xl font-bold text-primary mb-3">
                   Smart-Print Printer Help
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  Get clear, easy-to-follow support for installing software,
+                  Get clear, easy-to-follow Guide for installing software,
                   updating drivers, and resolving common issues.
                 </p>
                 <Button className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-md">
@@ -324,6 +325,7 @@ const PrinterSetupDetails = () => {
         </section>
 
         <Footer />
+        <Disc />
       </main>
     </div>
   );

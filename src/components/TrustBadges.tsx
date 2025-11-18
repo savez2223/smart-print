@@ -12,7 +12,7 @@ const badges = [
   {
     icon: oi2,
     title: "Premium Help",
-    sub: "Get 24/7 client support to assist with any problems or queries.",
+    sub: "Get 24/7 client Guide to assist with any problems or queries.",
   },
   {
     icon: oi3,

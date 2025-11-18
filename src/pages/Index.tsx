@@ -4,10 +4,11 @@ import SetupSteps from "@/components/SetupSteps";
 import Features from "@/components/Features";
 import PrintAnywhere from "@/components/PrintAnywhere";
 import Pricing from "@/components/Pricing";
-import Support from "@/components/Support";
+import Guide from "@/components/Support";
 import TrustBadges from "@/components/TrustBadges";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import Disc from "@/components/Disc";
 
 const Index = () => {
   return (
@@ -19,11 +20,12 @@ const Index = () => {
         <Features />
         <PrintAnywhere />
         <Pricing />
-        <Support />
+        <Guide />
         <TrustBadges />
         <Testimonials />
       </main>
       <Footer />
+      <Disc />
     </div>
   );
 };

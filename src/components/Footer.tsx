@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: "linear-gradient(90deg, #005bb5 0%, #00c5ff 100%)",
+        background: "linear-gradient(90deg, #2d9cdb 0%, #1b7fb8 100%)",
       }}
       className="text-primary-foreground py-12"
     >
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Support Links</h3>
+            <h3 className="font-semibold mb-4">Guide Links</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
                 <a href="#" className="hover:opacity-100">
@@ -89,9 +89,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li>Email: support@pcpackard.com</li>
-              {/* <li>Phone: 1-760-274-0909</li> */}
-              <li>Hours: 24/7 Support</li>
+              <li>Email: Guide@pcpackard.com</li>
+              <li>Hours: 24/7 Guide</li>
               <li>Location: United States</li>
             </ul>
           </div>

@@ -37,7 +37,7 @@ const PrintAnywhere = () => {
               </p>
               <p className="text-xs text-muted-foreground">
                 Smart-Print is a self-dependent solution provider for software
-                products. By downloading Smart Printer Support, you agree to our{" "}
+                products. By downloading Smart Printer Guide, you agree to our{" "}
                 <a
                   href="https://pcpackard.com/privacy-policy"
                   className="underline"
@@ -61,7 +61,7 @@ const PrintAnywhere = () => {
                 trademarks cited are for reference purposes only, and no
                 affiliation is indicated with any third-party companies. Smart
                 Printer Help DOES NOT sell or supply third-party technical
-                support.
+                Guide.
               </p>
             </div>
             <Button

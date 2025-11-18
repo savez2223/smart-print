@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import bgImage from "../images/setup-bg.jpg";
 import tshirtPrinter from "../images/print-s1.jpg";
 import tshirtWoman from "../images/print-s2.jpg";
+import Disc from "@/components/Disc";
 
 const PrinterSetup = () => {
   const navigate = useNavigate();
@@ -153,7 +154,7 @@ const PrinterSetup = () => {
                       "Smooth compatibility with a wide range of printer models",
                       "Pro-level color control for eye-catching, vibrant prints",
                       "Intuitive design tools for effortless customization",
-                      "Supports various file formats for maximum flexibility",
+                      "Guides various file formats for maximum flexibility",
                       "Smart print settings to save time, ink, and materials",
                       "Frequent updates packed with new features and enhancements",
                     ].map((feature, index) => (
@@ -228,6 +229,7 @@ const PrinterSetup = () => {
         </section>
 
         <Footer />
+        <Disc />
       </main>
     </div>
   );

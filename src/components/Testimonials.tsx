@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: "Michael T.",
     rating: 5,
-    text: "Outstanding customer support! They walked me through every step and made sure everything was working perfectly.",
+    text: "Outstanding customer Guide! They walked me through every step and made sure everything was working perfectly.",
   },
   {
     name: "Jennifer L.",

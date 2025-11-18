@@ -14,29 +14,34 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full py-4 px-5 border-b bg-white">
+    <header
+      className="w-full py-4 px-5 border-b text-primary-foreground"
+      style={{
+        background: "linear-gradient(90deg, #2d9cdb 0%, #1b7fb8 100%)",
+      }}
+    >
       {/* Top row: Steps + Product Selector in one line */}
       <div className="flex items-center justify-between w-full">
         {/* Steps */}
         <div className="flex items-center gap-3 text-[15px]">
-          <div className="flex items-center gap-1.5 text-blue-600 font-semibold">
-            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-blue-600 text-white text-[11px]">
+          <div className="flex items-center gap-1.5 text-white font-semibold">
+            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white text-blue-700 text-[11px]">
               1
             </span>
             Identify
           </div>
-          <span className="text-gray-400">›</span>
+          <span className="text-white/70">›</span>
 
-          <div className="flex items-center gap-1.5 text-gray-600">
-            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 text-[11px]">
+          <div className="flex items-center gap-1.5 text-white/90">
+            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               2
             </span>
             Download
           </div>
-          <span className="text-gray-400">›</span>
+          <span className="text-white/70">›</span>
 
-          <div className="flex items-center gap-1.5 text-gray-600">
-            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 text-[11px]">
+          <div className="flex items-center gap-1.5 text-white/90">
+            <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               3
             </span>
             Install
@@ -45,7 +50,7 @@ const Header = () => {
 
         {/* Product Selector Right Side */}
         <div className="flex items-center gap-3">
-          <span className="text-gray-700 text-sm font-medium whitespace-nowrap">
+          <span className="text-white text-sm font-medium whitespace-nowrap">
             Select a different product type:
           </span>
 

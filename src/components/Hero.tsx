@@ -31,8 +31,8 @@ const Hero = () => {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* LEFT TEXT */}
           <div className="flex flex-col justify-center items-start space-y-8">
-            <h1 className="text-5xl font-bold tracking-tight text-[#0274e6]">
-              EASY PRINTER SETUP
+            <h1 className="text-5xl font-bold tracking-tight text-[#2d9cdb]">
+              PRINTER SETUP
             </h1>
             <p className="text-lg text-gray-800">
               Power up your printer to begin.
