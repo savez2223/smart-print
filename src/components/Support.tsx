@@ -40,9 +40,9 @@ const Support = () => {
               >
                 Chat with Expert
               </Button>
-              <Button size="lg" variant="outline">
+              {/* <Button size="lg" variant="outline">
                 Call Now: 1-760-274-0909
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

@@ -90,7 +90,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>Email: support@pcpackard.com</li>
-              <li>Phone: 1-760-274-0909</li>
+              {/* <li>Phone: 1-760-274-0909</li> */}
               <li>Hours: 24/7 Support</li>
               <li>Location: United States</li>
             </ul>
