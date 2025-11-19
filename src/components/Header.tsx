@@ -1,5 +1,3 @@
-// Fully recreated UI (no old header) with steps + product type icons
-// Hover: light blue, Active: printer icon stays blue
 import { useState } from "react";
 import { Printer, Laptop, Smartphone, Monitor } from "lucide-react";
 
@@ -20,9 +18,8 @@ const Header = () => {
         background: "linear-gradient(90deg, #2d9cdb 0%, #1b7fb8 100%)",
       }}
     >
-      {/* Top row: Steps + Product Selector - Responsive */}
       <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-4">
-        {/* Steps */}
+        {/* Steps Section: Always visible */}
         <div className="flex items-center gap-2 md:gap-3 text-[13px] md:text-[15px] flex-wrap justify-center lg:justify-start">
           <div className="flex items-center gap-1.5 text-white font-semibold">
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white text-blue-700 text-[11px]">
@@ -31,7 +28,6 @@ const Header = () => {
             <span className="hidden sm:inline">Identify</span>
           </div>
           <span className="text-white/70">›</span>
-
           <div className="flex items-center gap-1.5 text-white/90">
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               2
@@ -39,7 +35,6 @@ const Header = () => {
             <span className="hidden sm:inline">Download</span>
           </div>
           <span className="text-white/70">›</span>
-
           <div className="flex items-center gap-1.5 text-white/90">
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               3
@@ -48,16 +43,14 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Product Selector Right Side */}
-        <div className="flex items-center gap-2 md:gap-3 flex-wrap justify-center">
+        {/* Product Selector: hidden on mobile, shown on md+ */}
+        <div className="hidden md:flex items-center gap-2 md:gap-3 flex-wrap justify-center">
           <span className="text-white text-xs md:text-sm font-medium whitespace-nowrap">
             Select a different product type:
           </span>
-
           {items.map((item) => {
             const Icon = item.icon;
             const isActive = item.id === "printer"; // Printer always blue
-
             return (
               <button
                 key={item.id}

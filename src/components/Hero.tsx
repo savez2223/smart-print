@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -14,10 +13,6 @@ const Hero = () => {
 
   const next = () => {
     setIndex((prev) => (prev + 1) % sliderImages.length);
-  };
-
-  const prev = () => {
-    setIndex((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
   };
 
   useEffect(() => {
@@ -43,51 +38,20 @@ const Hero = () => {
             </p>
             <Button
               onClick={() => navigate("/printer-setup")}
-              className="
-    bg-[#00a9ff] 
-    hover:bg-[#029ce8] 
-    text-white font-semibold 
-    py-2 md:py-3 px-4 md:px-6 text-sm md:text-base
-    shadow-lg
-    transition-all duration-300
-    shadow-black/50
-    hover:shadow-black/50
-    hover:-translate-y-1
-    hover:scale-105
-    ml-0 md:ml-6
-    w-full sm:w-auto
-  "
-              style={{ minWidth: "180px" }}
+              className="bg-[#00a9ff] hover:bg-[#029ce8] text-white font-semibold py-1.5 md:py-3 px-3 md:px-6 text-xs md:text-base shadow-lg transition-all duration-300 shadow-black/50 hover:shadow-black/50 hover:-translate-y-1 hover:scale-105 ml-0 md:ml-6 w-full sm:w-auto"
+              style={{ minWidth: "140px" }}
             >
               Click Here For Printer Setup
             </Button>
           </div>
 
-          {/* RIGHT IMAGE SLIDER */}
-          <div className="relative flex justify-end items-center">
+          {/* RIGHT IMAGE SLIDER WITHOUT ARROWS */}
+          <div className="flex justify-end items-center mr-0 md:mr-10">
             <img
               src={sliderImages[index]}
               alt="Printer"
               className="max-w-full h-auto rounded-lg shadow-md duration-500 ease-in-out transform"
             />
-            {/* LEFT ARROW */}
-            <button
-              onClick={prev}
-              className="absolute left-2 top-1/2 -translate-y-1/2 
-              bg-black/40 hover:bg-black/70 text-white rounded-full p-2 
-              shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft className="h-6 w-6" />
-            </button>
-            {/* RIGHT ARROW */}
-            <button
-              onClick={next}
-              className="absolute right-2 top-1/2 -translate-y-1/2 
-              bg-black/40 hover:bg-black/70 text-white rounded-full p-2 
-              shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight className="h-6 w-6" />
-            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import printAnywhere from "../images/printany.png"; // Update path as needed
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const PrintAnywhere = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-8 md:py-10 bg-background">
       <div className="container px-4 md:px-6">
@@ -64,6 +67,7 @@ const PrintAnywhere = () => {
               </p>
             </div>
             <Button
+              onClick={() => navigate("/printer-setup")}
               size="lg"
               className="
     bg-primary

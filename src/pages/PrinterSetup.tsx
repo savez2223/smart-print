@@ -9,6 +9,15 @@ import tshirtPrinter from "../images/print-s1.jpg";
 import tshirtWoman from "../images/print-s2.jpg";
 import Disc from "@/components/Disc";
 
+// declare global {
+//   interface Window {
+//     JivoApi?: {
+//       open?: () => void;
+//       [key: string]: any;
+//     };
+//   }
+// }
+
 const PrinterSetup = () => {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
@@ -158,11 +167,16 @@ const PrinterSetup = () => {
                       "Smart print settings to save time, ink, and materials",
                       "Frequent updates packed with new features and enhancements",
                     ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 md:gap-3">
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 md:gap-3"
+                      >
                         <div className="mt-1 bg-primary rounded p-1 flex-shrink-0">
                           <Check className="h-3 w-3 md:h-4 md:w-4 text-white" />
                         </div>
-                        <span className="text-sm md:text-base text-gray-700">{feature}</span>
+                        <span className="text-sm md:text-base text-gray-700">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -217,9 +231,21 @@ const PrinterSetup = () => {
 
                 <Button
                   size="lg"
+                  // onClick={() => {
+                  //   if (
+                  //     window.JivoApi &&
+                  //     typeof window.JivoApi.open === "function"
+                  //   ) {
+                  //     window.JivoApi.open();
+                  //   } else {
+                  //     alert(
+                  //       "Chat is not ready yet. Please try again in a moment."
+                  //     );
+                  //   }
+                  // }}
                   className="bg-primary text-white transition-all duration-300 
-          hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 
-          active:translate-y-0 active:shadow-md w-fit"
+    hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 
+    active:translate-y-0 active:shadow-md w-fit"
                 >
                   Chat With Us
                 </Button>
