@@ -25,7 +25,9 @@ const PrinterSetup = () => {
 
   const handleSearch = () => {
     if (query.trim()) {
-      navigate("/printer-setup-details", { state: { printerModel: query } });
+      navigate("/printer-setup/printer-setup-details", {
+        state: { printerModel: query },
+      });
     }
   };
 

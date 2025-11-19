@@ -15,7 +15,10 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/printer-setup" element={<PrinterSetup />} />
-        <Route path="/printer-setup-details" element={<PrinterSetupDetails />} />
+        <Route
+          path="/printer-setup/printer-setup-details"
+          element={<PrinterSetupDetails />}
+        />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
