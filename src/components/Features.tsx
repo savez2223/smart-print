@@ -65,14 +65,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-8 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">
+    <section className="py-6 md:py-8 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
             New!{" "}
             <span className="text-blue-600">Unravel Your Print Obstacles</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
             New! Smart-Print Smart Printer Setup is prepared to address the
             common obstacles that businesses face in their everyday printing
             work. If you want to connect remote offices, manage secure home
@@ -81,7 +81,7 @@ const Features = () => {
           </p>
         </div>
         {/* Main feature image */}
-        <div className="mb-10 flex justify-center">
+        <div className="mb-8 md:mb-10 flex justify-center">
           <img
             src={mainImage}
             alt="Printer Setup Showcase"
