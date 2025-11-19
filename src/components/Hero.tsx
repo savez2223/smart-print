@@ -26,18 +26,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#f8f9fb] py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
+    <section className="relative overflow-hidden bg-[#f8f9fb] py-8 md:py-12">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2 items-center">
           {/* LEFT TEXT */}
-          <div className="flex flex-col justify-center items-start space-y-8">
-            <h1 className="text-5xl font-bold tracking-tight text-[#2d9cdb]">
+          <div className="flex flex-col justify-center items-start space-y-4 md:space-y-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#2d9cdb]">
               PRINTER SETUP
             </h1>
-            <p className="text-lg text-gray-800">
+            <p className="text-base md:text-lg text-gray-800">
               Power up your printer to begin.
             </p>
-            <p className="text-lg text-gray-800">
+            <p className="text-base md:text-lg text-gray-800">
               Then, hit Printer Setup for a simple, step-by-step walkthrough on
               setting up, customizing, and registering your device.
             </p>
@@ -47,16 +47,17 @@ const Hero = () => {
     bg-[#00a9ff] 
     hover:bg-[#029ce8] 
     text-white font-semibold 
-    py-3 px-6 text-base
+    py-2 md:py-3 px-4 md:px-6 text-sm md:text-base
     shadow-lg
     transition-all duration-300
     shadow-black/50
     hover:shadow-black/50
     hover:-translate-y-1
     hover:scale-105
-    ml-6
+    ml-0 md:ml-6
+    w-full sm:w-auto
   "
-              style={{ width: "fit-content", minWidth: "180px" }}
+              style={{ minWidth: "180px" }}
             >
               Click Here For Printer Setup
             </Button>

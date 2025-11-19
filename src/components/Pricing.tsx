@@ -54,14 +54,14 @@ const features = [
 
 const Pricing = () => {
   return (
-    <section className="py-8 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
+    <section className="py-6 md:py-8 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Smart Printer <span className="text-accent">Setup Plans</span>
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
@@ -100,14 +100,14 @@ const Pricing = () => {
           ))}
         </div>
         {/* Features/Benefits Section */}
-        <div className="flex flex-wrap justify-center gap-4 mt-12">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8 md:mt-12">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 bg-white py-3 px-5 rounded-lg shadow-md min-w-[220px]"
+              className="flex items-center gap-2 bg-white py-2 md:py-3 px-3 md:px-5 rounded-lg shadow-md min-w-[180px] md:min-w-[220px]"
             >
               {feature.icon}
-              <span className="font-medium text-gray-700 text-sm">
+              <span className="font-medium text-gray-700 text-xs md:text-sm">
                 {feature.label}
               </span>
             </div>

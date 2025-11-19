@@ -59,28 +59,28 @@ const PrinterSetup = () => {
       <main>
         {/* Hero Section with Background */}
         <section
-          className="relative py-10 bg-cover bg-center"
+          className="relative py-8 md:py-10 bg-cover bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-5xl font-bold text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
                 Discover the Right Printer Software
               </h1>
-              <p className="text-lg text-white/90 mb-4">
+              <p className="text-base md:text-lg text-white/90 mb-3 md:mb-4">
                 From design tools to print management and driver updates —
                 everything you need for flawless t-shirt printing is right here.
               </p>
-              <p className="text-lg text-white/90 mb-8">
+              <p className="text-base md:text-lg text-white/90 mb-6 md:mb-8">
                 Just enter your printer model to get started and find the
                 perfect match for your setup.
               </p>
 
               {/* Search Bar + Suggestions */}
               <div className="relative">
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Input
                     type="text"
                     value={query}
@@ -89,15 +89,15 @@ const PrinterSetup = () => {
                       setShowList(true);
                     }}
                     placeholder='Enter your printer model. Ex: "Laserjet Pro 400"'
-                    className="flex-1 h-12 text-base bg-white"
+                    className="flex-1 h-10 md:h-12 text-sm md:text-base bg-white"
                   />
 
                   <Button
                     size="lg"
                     onClick={handleSearch}
-                    className="bg-primary hover:bg-primary/90 text-white px-8"
+                    className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 w-full sm:w-auto"
                   >
-                    <Search className="mr-2 h-5 w-5" />
+                    <Search className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Search
                   </Button>
                 </div>
@@ -131,25 +131,25 @@ const PrinterSetup = () => {
         </section>
 
         {/* Why Opt Section */}
-        <section className="py-10 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-stretch min-h-[420px]">
+        <section className="py-8 md:py-10 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
               {/* Text Column */}
               <div className="flex flex-col justify-between h-full">
                 <div>
-                  <h2 className="text-4xl font-bold text-primary mb-6">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
                     Why Opt for Our T-Shirt Printing Software?
                   </h2>
 
-                  <p className="text-gray-700 mb-8">
+                  <p className="text-sm md:text-base text-gray-700 mb-6 md:mb-8">
                     Choosing the right software isn't just about convenience—
-                    it’s about unlocking your full creative potential. Whether
+                    it's about unlocking your full creative potential. Whether
                     you're just starting out or running a print business, our
                     software helps you deliver stunning results with speed and
                     precision.
                   </p>
 
-                  <ul className="space-y-4">
+                  <ul className="space-y-3 md:space-y-4">
                     {[
                       "Smooth compatibility with a wide range of printer models",
                       "Pro-level color control for eye-catching, vibrant prints",
@@ -158,11 +158,11 @@ const PrinterSetup = () => {
                       "Smart print settings to save time, ink, and materials",
                       "Frequent updates packed with new features and enhancements",
                     ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 bg-primary rounded p-1">
-                          <Check className="h-4 w-4 text-white" />
+                      <li key={index} className="flex items-start gap-2 md:gap-3">
+                        <div className="mt-1 bg-primary rounded p-1 flex-shrink-0">
+                          <Check className="h-3 w-3 md:h-4 md:w-4 text-white" />
                         </div>
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-sm md:text-base text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -170,7 +170,7 @@ const PrinterSetup = () => {
               </div>
 
               {/* Image Column */}
-              <div className="h-full">
+              <div className="h-64 md:h-full">
                 <img
                   src={tshirtPrinter}
                   alt="T-shirt printing machine"
@@ -182,11 +182,11 @@ const PrinterSetup = () => {
         </section>
 
         {/* Journey Section */}
-        <section className="py-10 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-stretch min-h-[420px]">
+        <section className="py-8 md:py-10 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
               {/* Image Column */}
-              <div className="h-full">
+              <div className="h-64 md:h-full order-2 lg:order-1">
                 <img
                   src={tshirtWoman}
                   alt="Woman with custom T-shirt"
@@ -195,20 +195,20 @@ const PrinterSetup = () => {
               </div>
 
               {/* Text Column */}
-              <div className="flex flex-col justify-between h-full">
+              <div className="flex flex-col justify-between h-full order-1 lg:order-2">
                 <div>
-                  <h2 className="text-4xl font-bold text-primary mb-6">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6">
                     Kickstart Your Journey with T-Shirt Printing Software
                   </h2>
 
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
                     Take your t-shirt printing to the next level with powerful,
                     easy-to-use software. Whether you're just starting out or
                     already a pro, the right tools help you achieve accurate
-                    designs, bold colors, and a smooth workflow every time.
+                    results and bring your creative vision to life.
                   </p>
 
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
                     Enjoy features like intelligent design adjustments, wide
                     printer compatibility, and user-friendly interfaces that put
                     creativity and control at your fingertips.

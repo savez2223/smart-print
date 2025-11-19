@@ -20,15 +20,15 @@ const Header = () => {
         background: "linear-gradient(90deg, #2d9cdb 0%, #1b7fb8 100%)",
       }}
     >
-      {/* Top row: Steps + Product Selector in one line */}
-      <div className="flex items-center justify-between w-full">
+      {/* Top row: Steps + Product Selector - Responsive */}
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-4">
         {/* Steps */}
-        <div className="flex items-center gap-3 text-[15px]">
+        <div className="flex items-center gap-2 md:gap-3 text-[13px] md:text-[15px] flex-wrap justify-center lg:justify-start">
           <div className="flex items-center gap-1.5 text-white font-semibold">
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white text-blue-700 text-[11px]">
               1
             </span>
-            Identify
+            <span className="hidden sm:inline">Identify</span>
           </div>
           <span className="text-white/70">›</span>
 
@@ -36,7 +36,7 @@ const Header = () => {
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               2
             </span>
-            Download
+            <span className="hidden sm:inline">Download</span>
           </div>
           <span className="text-white/70">›</span>
 
@@ -44,13 +44,13 @@ const Header = () => {
             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-white/30 text-white text-[11px]">
               3
             </span>
-            Install
+            <span className="hidden sm:inline">Install</span>
           </div>
         </div>
 
         {/* Product Selector Right Side */}
-        <div className="flex items-center gap-3">
-          <span className="text-white text-sm font-medium whitespace-nowrap">
+        <div className="flex items-center gap-2 md:gap-3 flex-wrap justify-center">
+          <span className="text-white text-xs md:text-sm font-medium whitespace-nowrap">
             Select a different product type:
           </span>
 
@@ -61,14 +61,14 @@ const Header = () => {
             return (
               <button
                 key={item.id}
-                className={`h-12 w-12 flex items-center justify-center rounded-full border transition-all cursor-default
+                className={`h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full border transition-all cursor-default
                   ${
                     isActive
                       ? "bg-blue-600 text-white border-blue-600"
                       : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"
                   }`}
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-4 w-4 md:h-5 md:w-5" />
               </button>
             );
           })}
