@@ -197,12 +197,13 @@ const PrinterSetupDetails = () => {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  // onClick={() => window.JivoApi?.open?.()}
-                  className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg ml-0 md:ml-16 w-full sm:w-auto"
-                >
-                  Chat With Us
-                </Button>
+               <Button
+  // Yahan apna Tawk.to ka direct link daal dena
+  onClick={() => window.open("https://tawk.to/chat/YOUR_CHAT_ID/default", "_blank")}
+  className="bg-primary text-white hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg ml-0 md:ml-16 w-full sm:w-auto"
+>
+  Chat With Us
+</Button>
               </div>
               <div>
                 <img
