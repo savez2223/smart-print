@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import Index from "./pages/Index";
 import PrinterSetup from "./pages/PrinterSetup";
 import PrinterSetupDetails from "./pages/PrinterSetupDetails";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -21,6 +23,8 @@ const App = () => (
           path="/printer-setup/printer-setup-details"
           element={<PrinterSetupDetails />}
         />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
