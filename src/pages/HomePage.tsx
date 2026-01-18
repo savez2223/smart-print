@@ -175,7 +175,7 @@ const stepsData = [
   {
     id: 1,
     title: "First Consultation",
-    image: "/images/step1.jpg",
+    image: S1,
     points: [
       "Identify current challenges and goals",
       "Understand your business workflow",
@@ -189,7 +189,7 @@ const stepsData = [
   {
     id: 2,
     title: "Evaluation and Scheduling",
-    image: "/images/step2.jpg",
+    image: S2,
     points: [
       "Identifying critical technological needs",
       "Creating a custom solution strategy",
@@ -202,7 +202,7 @@ const stepsData = [
   {
     id: 3,
     title: "Execution",
-    image: "/images/step3.jpg",
+    image: S3,
     points: [
       "Coordinating with your team for smooth operations",
       "Minimizing disruptions during implementation",
@@ -216,7 +216,7 @@ const stepsData = [
   {
     id: 4,
     title: "Continued Assistance",
-    image: "/images/step4.jpg",
+    image: S4,
     points: [
       "Regular system monitoring and updates",
       "Prompt troubleshooting and issue resolution",
@@ -233,6 +233,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [activeStep, setActiveStep] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -511,26 +512,26 @@ const HomePage = () => {
       {/* Our Work Process Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
+          {/* Heading */}
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4">
               Our Work Process
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-              To ensure that we customize our services to meet your unique
-              demands, we start by conducting a thorough consultation to fully
-              understand your needs.
+              We follow a structured approach to deliver reliable and scalable solutions.
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {workProcessSteps.map((step) => (
+          {/* Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
+            {stepsData.map((step) => (
               <button
                 key={step.id}
-                className={`px-6 py-3 rounded-full font-medium transition-all ${
-                  step.active
-                    ? "bg-[#005bb5] text-white"
-                    : "bg-white text-gray-700 border border-gray-300 hover:border-[#005bb5]"
+                onClick={() => setActiveStep(step.id)}
+                className={`px-4 md:px-6 py-3 rounded-lg font-medium transition-all shadow text-sm md:text-base ${
+                  activeStep === step.id
+                    ? "bg-[#0a1930] text-white"
+                    : "bg-[#06b6d4] text-white hover:opacity-90"
                 }`}
               >
                 {step.id}. {step.title}
@@ -538,43 +539,46 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* Evaluation Content */}
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-bold text-[#005bb5] mb-4">
-              Evaluation and Scheduling
-            </h3>
-            <p className="text-gray-600 mb-6">
-              During the evaluation, our team of experts carefully analyzes your
-              situation to identify any technical problem or improvement
-              opportunities. Based on this analysis, we create a tailored action
-              plan with the necessary steps to help you achieve success. The
-              schedule is agreed with your preferred dates and times and our
-              team. Our evaluation may include:
-            </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">
-                  Identifying immediate repair needs
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">
-                  Creating a detailed action plan with timelines
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">
-                  Providing options tailored to your budget and preferences
-                </span>
-              </li>
-            </ul>
-            <p className="text-gray-600 italic text-sm">
-              This ensures a smooth transition from your assessment to
-              execution.
-            </p>
+          {/* Content */}
+          <div className="flex flex-col lg:flex-row items-stretch gap-8 max-w-6xl mx-auto">
+            {/* Left Text (Slide Animation) */}
+            <div
+              key={activeStep}
+              className="flex-1 bg-white rounded-xl shadow-lg p-6 md:p-8 animate-slideIn"
+            >
+              <h3 className="text-xl md:text-2xl font-bold text-[#005bb5] mb-4">
+                {stepsData.find((s) => s.id === activeStep)?.title}
+              </h3>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {stepsData.find((s) => s.id === activeStep)?.description}
+              </p>
+
+              <ul className="space-y-3 mb-6">
+                {stepsData
+                  .find((s) => s.id === activeStep)
+                  ?.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{point}</span>
+                    </li>
+                  ))}
+              </ul>
+
+              <p className="text-gray-500 italic text-sm border-t pt-4">
+                {stepsData.find((s) => s.id === activeStep)?.footer}
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex-1 rounded-xl overflow-hidden shadow-lg">
+              <img
+                key={activeStep}
+                src={stepsData.find((s) => s.id === activeStep)?.image}
+                alt={stepsData.find((s) => s.id === activeStep)?.title}
+                className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
+              />
+            </div>
           </div>
         </div>
       </section>
