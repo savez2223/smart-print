@@ -46,6 +46,9 @@ import P3 from "@/images/P3.png";
 import P4 from "@/images/p4.png";
 import P5 from "@/images/p5.png";
 import P6 from "@/images/p6.png";
+import CompTIALogo from "@/images/comptia.png";
+import PaymentLogo from "@/images/f4payment.png";
+import CompTIADown from "@/images/comptia down.png";
 
 const heroSlides = [
   {
@@ -392,20 +395,69 @@ const HomePage = () => {
       </section>
 
       {/* CompTIA Recognition Section */}
-      <section className="py-8 md:py-12 bg-white">
+      <section className="py-8 md:py-12 bg-[#f8f8f8]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <div className="flex items-center gap-4 bg-gray-50 px-6 py-4 rounded-lg">
-              <div className="w-12 h-12 bg-[#005bb5] rounded-full flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Left Side - CompTIA Logo & Text */}
+            <div className="flex-1 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              {/* CompTIA Badge */}
+              <div className="flex-shrink-0">
+                <img 
+                  src={CompTIALogo} 
+                  alt="CompTIA A+ Certified" 
+                  className="h-24 md:h-28 object-contain"
+                />
               </div>
-              <div>
-                <p className="font-bold text-[#005bb5]">
-                  CompTIA A+ is Recognized
-                </p>
-                <p className="text-sm text-gray-600">By these Organizations</p>
+              
+              {/* Divider */}
+              <div className="hidden md:block w-px h-20 bg-gray-300"></div>
+              
+              {/* Text & Brand Logos */}
+              <div className="flex flex-col items-center md:items-start gap-4">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#0a1930]">
+                  <span className="text-[#dc2626]">CompTIA A+</span> is Recognized
+                  <br />
+                  <span className="text-gray-700">& Required by these Organizations</span>
+                </h3>
+                
+                {/* Brand Logos */}
+                <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
+                  <img src={CompTIADown} alt="Organization Logos" className="h-8 md:h-10 object-contain" />
+                </div>
               </div>
             </div>
+            
+            {/* Right Side - Video Placeholder */}
+            <div className="flex-shrink-0 w-full lg:w-[400px] xl:w-[480px]">
+              <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-200 aspect-video">
+                {/* Video placeholder - User will add video */}
+                <video 
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  {/* User can add video source here */}
+                </video>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-all shadow-lg">
+                    <svg className="w-8 h-8 text-[#005bb5] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Payment Logo */}
+          <div className="mt-8 flex justify-center">
+            <img 
+              src={PaymentLogo} 
+              alt="Payment Methods" 
+              className="h-10 md:h-12 object-contain opacity-80"
+            />
           </div>
         </div>
       </section>
