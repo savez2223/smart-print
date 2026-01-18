@@ -49,6 +49,10 @@ import P6 from "@/images/p6.png";
 import CompTIALogo from "@/images/comptia.png";
 import PaymentLogo from "@/images/f4payment.png";
 import CompTIADown from "@/images/comptia down.png";
+import S1 from "@/images/s1.jpg";
+import S2 from "@/images/s2.jpg";
+import S3 from "@/images/s3.jpg";
+import S4 from "@/images/s4.jpg";
 
 const heroSlides = [
   {
@@ -165,6 +169,64 @@ const partners = [
   "CompTIA",
   "RingCentral",
   "LogMe",
+];
+
+const stepsData = [
+  {
+    id: 1,
+    title: "First Consultation",
+    image: "/images/step1.jpg",
+    points: [
+      "Identify current challenges and goals",
+      "Understand your business workflow",
+      "Suggest potential solutions to improve efficiency",
+    ],
+    description:
+      "To ensure that we customize our services to meet your unique demands, we start by conducting a thorough consultation to fully understand your needs. During this initial phase, we analyze your business operations, listen to your goals, and assess the existing technology infrastructure.",
+    footer:
+      "This collaborative process sets the foundation for an effective partnership.",
+  },
+  {
+    id: 2,
+    title: "Evaluation and Scheduling",
+    image: "/images/step2.jpg",
+    points: [
+      "Identifying critical technological needs",
+      "Creating a custom solution strategy",
+      "Planning implementation with minimal downtime",
+    ],
+    description:
+      "After the consultation, our team of experts carefully evaluates your situation, identifying any technological gaps or areas of improvement. Based on this evaluation, we present a detailed action plan.",
+    footer: "This ensures a seamless transition from assessment to execution.",
+  },
+  {
+    id: 3,
+    title: "Execution",
+    image: "/images/step3.jpg",
+    points: [
+      "Coordinating with your team for smooth operations",
+      "Minimizing disruptions during implementation",
+      "Adhering to quality control for optimal results",
+    ],
+    description:
+      "Once the plan is approved, we move forward with the execution phase. Our team works diligently to deploy the solution, ensuring minimal operational disruption.",
+    footer:
+      "This step is essential to achieving long-lasting and reliable outcomes.",
+  },
+  {
+    id: 4,
+    title: "Continued Assistance",
+    image: "/images/step4.jpg",
+    points: [
+      "Regular system monitoring and updates",
+      "Prompt troubleshooting and issue resolution",
+      "Tailored support to fit your evolving needs",
+    ],
+    description:
+      "We don’t stop at execution; our relationship continues through ongoing support and maintenance to ensure your systems remain optimized for long-term success.",
+    footer:
+      "This commitment ensures that your business stays agile and ready for future challenges.",
+  },
 ];
 
 const HomePage = () => {
@@ -397,7 +459,7 @@ const HomePage = () => {
       {/* CompTIA Recognition Section */}
       <section className="py-8 md:py-12 bg-[#f8f8f8]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+          <div className="flex flex-col lg:flex-row items-center gap-0 lg:gap-2">
             {/* Left Side */}
             <div className="flex-1 flex flex-col md:flex-row items-center gap-6 md:gap-8">
               <div className="flex-shrink-0 px-14">
@@ -417,7 +479,7 @@ const HomePage = () => {
             </div>
 
             {/* Right Side - Slim Video Frame */}
-            <div className="flex-shrink-0 w-full lg:w-[520px] xl:w-[620px]">
+            <div className="flex-shrink-0 w-full lg:w-[420px] xl:w-[500px] px-7">
               <div
                 className="
             relative
