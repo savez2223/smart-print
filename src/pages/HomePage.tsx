@@ -397,67 +397,51 @@ const HomePage = () => {
       {/* CompTIA Recognition Section */}
       <section className="py-8 md:py-12 bg-[#f8f8f8]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Left Side - CompTIA Logo & Text */}
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8">
+            {/* Left Side */}
             <div className="flex-1 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-              {/* CompTIA Badge */}
-              <div className="flex-shrink-0">
-                <img 
-                  src={CompTIALogo} 
-                  alt="CompTIA A+ Certified" 
-                  className="h-24 md:h-28 object-contain"
+              <div className="flex-shrink-0 px-14">
+                <img
+                  src={CompTIALogo}
+                  alt="CompTIA A+ Certified"
+                  className="h-20 md:h-24 object-contain"
                 />
-              </div>
-              
-              {/* Divider */}
-              <div className="hidden md:block w-px h-20 bg-gray-300"></div>
-              
-              {/* Text & Brand Logos */}
-              <div className="flex flex-col items-center md:items-start gap-4">
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#0a1930]">
-                  <span className="text-[#dc2626]">CompTIA A+</span> is Recognized
-                  <br />
-                  <span className="text-gray-700">& Required by these Organizations</span>
-                </h3>
-                
-                {/* Brand Logos */}
                 <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
-                  <img src={CompTIADown} alt="Organization Logos" className="h-8 md:h-10 object-contain" />
+                  <img
+                    src={CompTIADown}
+                    alt="Organization Logos"
+                    className="h-8 md:h-10 object-contain px-9"
+                  />
                 </div>
               </div>
             </div>
-            
-            {/* Right Side - Video Placeholder */}
-            <div className="flex-shrink-0 w-full lg:w-[400px] xl:w-[480px]">
-              <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-200 aspect-video">
-                {/* Video placeholder - User will add video */}
-                <video 
+
+            {/* Right Side - Slim Video Frame */}
+            <div className="flex-shrink-0 w-full lg:w-[520px] xl:w-[620px]">
+              <div
+                className="
+            relative
+            overflow-hidden
+            shadow-lg
+            bg-gray-200
+            h-[160px] md:h-[180px]
+            rounded-tr-xl
+            rounded-br-xl
+            rounded-tl-[120px]
+            rounded-bl-[120px]
+          "
+              >
+                <video
                   className="w-full h-full object-cover"
                   autoPlay
                   loop
                   muted
                   playsInline
                 >
-                  {/* User can add video source here */}
+                  <source src="https://res.cloudinary.com/dqfpl11hb/video/upload/f_mp4/v1768766580/video-final23325434_zzr9ka.mkv" />
                 </video>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-all shadow-lg">
-                    <svg className="w-8 h-8 text-[#005bb5] ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-          
-          {/* Payment Logo */}
-          <div className="mt-8 flex justify-center">
-            <img 
-              src={PaymentLogo} 
-              alt="Payment Methods" 
-              className="h-10 md:h-12 object-contain opacity-80"
-            />
           </div>
         </div>
       </section>
