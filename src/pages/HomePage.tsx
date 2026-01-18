@@ -1,55 +1,93 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, ChevronLeft, ChevronRight, Monitor, Printer, Wifi, Speaker, Smartphone, Shield, Mail, Home, Headphones, Tv, Lock, CheckCircle, Star, ArrowUp } from "lucide-react";
+import {
+  Phone,
+  ChevronLeft,
+  ChevronRight,
+  Monitor,
+  Printer,
+  Wifi,
+  Speaker,
+  Smartphone,
+  Shield,
+  Mail,
+  Home,
+  Headphones,
+  Tv,
+  Lock,
+  CheckCircle,
+  Star,
+  ArrowUp,
+} from "lucide-react";
 import HomeHeader from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
 import Disc from "@/components/Disc";
+import HBG1 from "@/images/HBG1.jpg";
+import HBG2 from "@/images/HBG2.jpg";
+import HBG3 from "@/images/HBG3.jpg";
+import CDA1 from "@/images/CDA 1.jpg";
+import CDA2 from "@/images/CDA 2.png";
+import CDA3 from "@/images/CDA 3.jpg";
+import CDA4 from "@/images/CDA 4.jpg";
+import ONSITEBG from "@/images/OnSITEBG.png";
+import P1 from "@/images/P1.png";
+import P2 from "@/images/p2.png";
+import P3 from "@/images/P3.png";
+import P4 from "@/images/p4.png";
+import P5 from "@/images/p5.png";
+import P6 from "@/images/p6.png";
 
 const heroSlides = [
   {
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80",
+    image: HBG1,
     title: "Quick and Accurate Computer Assistance",
-    description: "At SmartPrint, we offer professional computer support services to ensure your system operates seamlessly. Our certified technicians provide prompt and efficient solutions for all your computer-related issues, whether it's slow performance, software installation, or virus removal."
+    description:
+      "At PC Packard, we offer professional computer support services to ensure your system operates seamlessly. Our certified CompTIA A+ technicians provide prompt and efficient solutions for all your computer-related issues, whether it's slow performance, software installation, or virus removal. Your devices will remain secure, optimized, and prepared to fulfill your personal or business requirements.",
   },
   {
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80",
-    title: "Expert Printer Setup & Support",
-    description: "Get your printer connected and running in minutes. Our step-by-step guides and expert support team are here to help you with wireless setup, driver installation, and troubleshooting any printing issues."
+    image: HBG2,
+    title: "Easy Printer Configuration",
+    description:
+      "Enhance your printing experience with PC Packard expert printer configuration services. We provide comprehensive services, covering both wired and wireless configurations, cloud printing, and network configuration, to guarantee that your printer is installed and optimized for effortless operation. Obtain professional support for seamless printing, whether at home or in the office, ensuring your workflow remains uninterrupted.",
   },
   {
-    image: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1920&q=80",
-    title: "24/7 Technical Support Available",
-    description: "Round-the-clock assistance for all your tech needs. From network issues to device configuration, our team is always ready to help you get back on track."
-  }
+    image: HBG3,
+    title: "Effortless WiFi Configuration for an Interconnected World",
+    description:
+      "In the current digital landscape, having a dependable WiFi network is crucial for both residential and commercial settings. PC Packard provides thorough WiFi configuration services designed to guarantee rapid, secure, and seamless internet connectivity across your area. Whether you require a home network designed for seamless streaming or a powerful system for a busy office, our specialists will customize solutions to meet your specific requirements, improving your online experience and ensuring effortless connectivity.",
+  },
 ];
 
 const deviceCategories = [
   {
-    icon: Monitor,
+    icon: CDA1,
     title: "Computer",
-    description: "Resolve common errors to computer and laptops from troubleshooting to software, system or platform issues.",
-    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&q=80"
+    description:
+      "Receive expert assistance for computers and printers from anywhere. Our technicians ensure optimal performance through troubleshooting, configuration, and maintenance services",
+    image: CDA1,
   },
   {
-    icon: Printer,
+    icon: CDA2,
     title: "Printer & Scanner",
-    description: "We solve printer and scanner-related issues from wrong print issues and connectivity to paper jams, printing and scanning.",
-    image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80",
-    link: "/setup"
+    description:
+      "We resolve printer and scanner-related issues, ensuring your devices run smoothly and efficiently, keeping you connected and productive at all times.",
+    image: CDA2,
   },
   {
     icon: Wifi,
     title: "WiFi & Network",
-    description: "Ensure faster and stable WiFi and network connection. Optimize your network for peak performance and reliability.",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80"
+    description:
+      "Ensure fast and secure WiFi connections at home or work. Our specialists optimize your network for peak performance and reliability.",
+    image: CDA3,
   },
   {
     icon: Home,
     title: "Smart Home",
-    description: "Enhance your smart home with security systems and smart appliances. We set up your smart devices for convenient, powerful, seamless efficiency.",
-    image: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&q=80"
-  }
+    description:
+      "Enhance your smart home with our configuration and management services. We ensure your smart devices function seamlessly, providing convenience and efficiency.",
+    image: CDA4,
+  },
 ];
 
 const assistCategories = [
@@ -76,36 +114,36 @@ const testimonials = [
     name: "PC PACKARD",
     rating: 5,
     text: "PC Packard had a positive experience. They help us with computer and printer-related problems with their excellent knowledge about every technology, always recommended to anyone needing tech support.",
-    source: "Google"
+    source: "Google",
   },
   {
     name: "David Mukherjee",
     rating: 5,
     text: "Setting up HP printer was a walk in park thanks to PC Packard. My new printer setup and now I am able to print anywhere in my home. Truly professional.",
     time: "1 month ago",
-    source: "Google"
+    source: "Google",
   },
   {
     name: "Angela Sanchez",
     rating: 5,
     text: "Had connection issues with my router. PC Packard fixed everything and now I'm enjoying high-speed internet. Very knowledgeable and patient with explaining everything in simple terms.",
     time: "2 weeks ago",
-    source: "Google"
+    source: "Google",
   },
   {
     name: "Ryan Albert",
     rating: 5,
     text: "Amazing service! Had an issue with my PC and they diagnosed it quickly and fixed it remotely. The tech was extremely helpful and made sure everything was working perfectly.",
     time: "3 days ago",
-    source: "Google"
+    source: "Google",
   },
   {
     name: "Monica Sterling",
     rating: 5,
     text: "I was struggling with a virus infection on my laptop. The team at PC Packard handled it expertly. They cleaned my system and set up protection to prevent future issues.",
     time: "2 months ago",
-    source: "Google"
-  }
+    source: "Google",
+  },
 ];
 
 const partners = [
@@ -114,7 +152,7 @@ const partners = [
   "McAfee",
   "CompTIA",
   "RingCentral",
-  "LogMe"
+  "LogMe",
 ];
 
 const HomePage = () => {
@@ -133,8 +171,8 @@ const HomePage = () => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const nextSlide = () => {
@@ -142,11 +180,13 @@ const HomePage = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
+    );
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -154,7 +194,7 @@ const HomePage = () => {
       <HomeHeader />
 
       {/* Hero Carousel Section */}
-      <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+      <section className="relative h-[400px] md:h-[400px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
@@ -166,7 +206,7 @@ const HomePage = () => {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#005bb5]/90 to-[#00c5ff]/70" />
+            <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 md:px-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-tight mb-6">
                 {slide.title}
@@ -199,7 +239,7 @@ const HomePage = () => {
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -209,7 +249,7 @@ const HomePage = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Device Assistance Section */}
@@ -220,7 +260,8 @@ const HomePage = () => {
               Complete Device Assistance Personalized for You!
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-              From laptops to smartphones, printers to smart home devices – we've got your back with reliable assistance for all your gadgets.
+              From laptops to smartphones, printers to smart home devices –
+              we've got your back with reliable assistance for all your gadgets.
             </p>
           </div>
 
@@ -228,21 +269,22 @@ const HomePage = () => {
             {deviceCategories.map((category, index) => (
               <div
                 key={index}
-                onClick={() => category.link && navigate(category.link)}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                  category.link ? "cursor-pointer" : ""
-                }`}
+                className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 `}
               >
                 <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    className="w-full h-full object-contain bg-white transition-transform duration-500 hover:scale-110"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#005bb5] mb-2">{category.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{category.description}</p>
+                  <h3 className="text-lg font-bold text-[#005bb5] mb-2">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {category.description}
+                  </p>
                   <button className="text-[#00c5ff] font-semibold text-sm border border-[#00c5ff] px-4 py-2 rounded-full hover:bg-[#00c5ff] hover:text-white transition-all">
                     Read More
                   </button>
@@ -261,7 +303,11 @@ const HomePage = () => {
               How Can We Assist You Today?
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto">
-              We believe technology should enhance everyone's life. That's why we offer a comprehensive range of technology solutions from maintenance, to configuration, ensuring you're always connected from maintenance to installations and expert support. What can we do for you today?
+              We believe technology should enhance everyone's life. That's why
+              we offer a comprehensive range of technology solutions from
+              maintenance, to configuration, ensuring you're always connected
+              from maintenance to installations and expert support. What can we
+              do for you today?
             </p>
           </div>
 
@@ -274,7 +320,9 @@ const HomePage = () => {
                 <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-[#00c5ff]">
                   <category.icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-600 group-hover:text-[#005bb5] transition-colors" />
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">{category.label}</span>
+                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
+                  {category.label}
+                </span>
               </div>
             ))}
           </div>
@@ -288,7 +336,9 @@ const HomePage = () => {
                 <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-[#00c5ff]">
                   <category.icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-600 group-hover:text-[#005bb5] transition-colors" />
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">{category.label}</span>
+                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
+                  {category.label}
+                </span>
               </div>
             ))}
           </div>
@@ -310,7 +360,9 @@ const HomePage = () => {
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="font-bold text-[#005bb5]">CompTIA A+ is Recognized</p>
+                <p className="font-bold text-[#005bb5]">
+                  CompTIA A+ is Recognized
+                </p>
                 <p className="text-sm text-gray-600">By these Organizations</p>
               </div>
             </div>
@@ -326,7 +378,9 @@ const HomePage = () => {
               Our Work Process
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-              To ensure that we customize our services to meet your unique demands, we start by conducting a thorough consultation to fully understand your needs.
+              To ensure that we customize our services to meet your unique
+              demands, we start by conducting a thorough consultation to fully
+              understand your needs.
             </p>
           </div>
 
@@ -352,59 +406,75 @@ const HomePage = () => {
               Evaluation and Scheduling
             </h3>
             <p className="text-gray-600 mb-6">
-              During the evaluation, our team of experts carefully analyzes your situation to identify any
-              technical problem or improvement opportunities. Based on this analysis, we create a tailored
-              action plan with the necessary steps to help you achieve success. The
-              schedule is agreed with your preferred dates and times and our team. Our
-              evaluation may include:
+              During the evaluation, our team of experts carefully analyzes your
+              situation to identify any technical problem or improvement
+              opportunities. Based on this analysis, we create a tailored action
+              plan with the necessary steps to help you achieve success. The
+              schedule is agreed with your preferred dates and times and our
+              team. Our evaluation may include:
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">Identifying immediate repair needs</span>
+                <span className="text-gray-700">
+                  Identifying immediate repair needs
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">Creating a detailed action plan with timelines</span>
+                <span className="text-gray-700">
+                  Creating a detailed action plan with timelines
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">Providing options tailored to your budget and preferences</span>
+                <span className="text-gray-700">
+                  Providing options tailored to your budget and preferences
+                </span>
               </li>
             </ul>
             <p className="text-gray-600 italic text-sm">
-              This ensures a smooth transition from your assessment to execution.
+              This ensures a smooth transition from your assessment to
+              execution.
             </p>
-          </div>
-
-          {/* Video Placeholder */}
-          <div className="mt-12 max-w-4xl mx-auto">
-            <div className="aspect-video bg-gray-200 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-[#005bb5] rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-[#00a0d4] transition-colors">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500">Video content coming soon</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* On-Site & Remote Support Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#005bb5] to-[#00c5ff]">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="relative py-16 md:py-24 bg-[url('@/images/OnSITEBG.png')] bg-repeat-x bg-center bg-auto">
+        {/* Light Blue Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#005bb5]/10 to-[#00c5ff]/8"></div>
+
+        <div className="relative container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
             On-Site & Remote Support for Your Printer, WiFi, and Smart Devices
           </h2>
-          <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto mb-8">
-            At PC Packard, we understand the crucial role that printers and smart devices play in your daily operations. Our expert team is here to provide comprehensive support, whether you need assistance on-site or prefer the convenience of remote troubleshooting.
+          <p className="text-base md:text-lg text-black/80 max-w-3xl mx-auto mb-8">
+            At PC Packard, we understand the crucial role that printers and
+            smart devices play in your daily operations. Our expert team is here
+            to provide comprehensive support, whether you need assistance
+            on-site or prefer the convenience of remote troubleshooting.
           </p>
+
           <Button
             onClick={() => navigate("/setup")}
-            className="bg-white text-[#005bb5] hover:bg-gray-100 font-semibold py-6 px-8 text-base md:text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+            className="
+        bg-white
+        text-[#005bb5]
+        border-2 border-[#005bb5]
+        font-semibold
+        py-6 px-8
+        text-base md:text-lg
+        rounded-full
+        shadow-lg
+        transition-all duration-300
+        hover:scale-105
+        hover:text-white
+        hover:bg-gradient-to-r
+        hover:from-[#005bb5]/90
+        hover:to-[#00c5ff]/70
+      "
           >
             Contact Us
           </Button>
@@ -433,23 +503,43 @@ const HomePage = () => {
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#0a1930]">{testimonial.name}</h4>
+                    <h4 className="font-bold text-[#0a1930]">
+                      {testimonial.name}
+                    </h4>
                     {testimonial.time && (
-                      <p className="text-sm text-gray-500">{testimonial.time}</p>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.time}
+                      </p>
                     )}
                   </div>
                 </div>
                 <div className="flex gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 text-yellow-400 fill-yellow-400"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-600 text-sm">{testimonial.text}</p>
                 <div className="mt-4 pt-4 border-t">
-                  <a href="#" className="text-[#00c5ff] text-sm font-medium flex items-center gap-1">
+                  <a
+                    href="#"
+                    className="text-[#00c5ff] text-sm font-medium flex items-center gap-1"
+                  >
                     View on {testimonial.source}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -460,22 +550,81 @@ const HomePage = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0a1930]">
-              Our Partnered
+              Our Partners
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="text-gray-400 font-bold text-lg md:text-xl hover:text-[#005bb5] transition-colors cursor-pointer"
-              >
-                {partner}
-              </div>
-            ))}
+
+          {/* Marquee Wrapper */}
+          <div className="relative w-full overflow-hidden">
+            <div className="flex items-center gap-12 animate-marquee whitespace-nowrap">
+              {/* First set */}
+              <img
+                src={P1}
+                alt="Partner 1"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+              <img
+                src={P2}
+                alt="Partner 2"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+              <img
+                src={P3}
+                alt="Partner 3"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+              <img
+                src={P4}
+                alt="Partner 4"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+              <img
+                src={P5}
+                alt="Partner 5"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+              <img
+                src={P6}
+                alt="Partner 6"
+                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+              />
+
+              {/* Duplicate set for smooth loop */}
+              <img
+                src={P1}
+                alt="Partner 1"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+              <img
+                src={P2}
+                alt="Partner 2"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+              <img
+                src={P3}
+                alt="Partner 3"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+              <img
+                src={P4}
+                alt="Partner 4"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+              <img
+                src={P5}
+                alt="Partner 5"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+              <img
+                src={P6}
+                alt="Partner 6"
+                className="h-12 md:h-16 object-contain opacity-70"
+              />
+            </div>
           </div>
         </div>
       </section>
