@@ -22,6 +22,15 @@ import {
 } from "lucide-react";
 import HomeHeader from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
+import A1 from "@/images/1.png";
+import A2 from "@/images/2.png";
+import A3 from "@/images/3.png";
+import A4 from "@/images/4.png";
+import A5 from "@/images/5.png";
+import A6 from "@/images/6.png";
+import A7 from "@/images/7.png";
+import A8 from "@/images/8.png";
+import A9 from "@/images/9.png";
 import Disc from "@/components/Disc";
 import HBG1 from "@/images/HBG1.jpg";
 import HBG2 from "@/images/HBG2.jpg";
@@ -91,15 +100,15 @@ const deviceCategories = [
 ];
 
 const assistCategories = [
-  { icon: Monitor, label: "Computer" },
-  { icon: Printer, label: "Printer & Scanner" },
-  { icon: Wifi, label: "Wifi & Network" },
-  { icon: Mail, label: "Email" },
-  { icon: Shield, label: "Antivirus" },
-  { icon: Smartphone, label: "Mobile & Tablets" },
-  { icon: Headphones, label: "Audio & Video (Alexa)" },
-  { icon: Tv, label: "TV Mounting" },
-  { icon: Lock, label: "Home Security" },
+  { image: A1, label: "Computer" },
+  { image: A2, label: "Printer & Scanner" },
+  { image: A3, label: "Wifi & Network" },
+  { image: A4, label: "Email" },
+  { image: A5, label: "Antivirus" },
+  { image: A6, label: "Mobile & Tablets" },
+  { image: A7, label: "Audio & Video (Alexa)" },
+  { image: A8, label: "TV Mounting" },
+  { image: A9, label: "Home Security" },
 ];
 
 const workProcessSteps = [
@@ -253,7 +262,7 @@ const HomePage = () => {
       </section>
 
       {/* Device Assistance Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#005bb5] mb-4">
@@ -296,55 +305,86 @@ const HomePage = () => {
       </section>
 
       {/* How Can We Assist You Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4 italic">
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4">
               How Can We Assist You Today?
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto">
-              We believe technology should enhance everyone's life. That's why
-              we offer a comprehensive range of technology solutions from
-              maintenance, to configuration, ensuring you're always connected
-              from maintenance to installations and expert support. What can we
-              do for you today?
+
+            <h3 className="text-lg md:text-xl font-semibold text-[#005bb5] mb-4">
+              Reliable Technology Support for Your Home and Business
+            </h3>
+
+            <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We believe technology should simplify your life, not complicate
+              it. From maintenance and configuration to installations and expert
+              support, our specialists ensure your devices stay connected,
+              secure, and running smoothly.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
-            {assistCategories.slice(0, 6).map((category, index) => (
+          {/* Top Row */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-0 mb-12">
+            {assistCategories.slice(0, 6).map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 cursor-pointer group"
+                className="flex flex-col items-center gap-4 group cursor-pointer"
               >
-                <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-[#00c5ff]">
-                  <category.icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-600 group-hover:text-[#005bb5] transition-colors" />
+                {/* Glow Wrapper */}
+                <div className="relative">
+                  {/* Blue Glow */}
+                  <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-[#00c5ff]/70 scale-110"></div>
+
+                  {/* Circle */}
+                  <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-white border-4 border-white shadow-md">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-white/10 group-hover:bg-white/0 transition-all duration-300" />
+                  </div>
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
-                  {category.label}
+
+                <span className="text-sm font-medium text-gray-700 text-center">
+                  {item.label}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center gap-4 md:gap-6">
-            {assistCategories.slice(6).map((category, index) => (
+          {/* Bottom Row */}
+          <div className="flex flex-wrap justify-center gap-12">
+            {assistCategories.slice(6).map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 cursor-pointer group"
+                className="flex flex-col items-center gap-4 group cursor-pointer"
               >
-                <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-[#00c5ff]">
-                  <category.icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-600 group-hover:text-[#005bb5] transition-colors" />
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-[#00c5ff]/70 scale-110"></div>
+
+                  <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-white border-4 border-white shadow-md">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-white/10 group-hover:bg-white/0 transition-all duration-300" />
+                  </div>
                 </div>
-                <span className="text-xs md:text-sm font-medium text-gray-700 text-center">
-                  {category.label}
+
+                <span className="text-sm font-medium text-gray-700 text-center">
+                  {item.label}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center mt-8">
-            <button className="bg-[#00c5ff] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#00a0d4] transition-all shadow-lg">
+          {/* CTA */}
+          <div className="flex justify-center mt-16">
+            <button className="bg-[#00c5ff] hover:bg-[#00a0d4] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all">
               Get In Touch
             </button>
           </div>

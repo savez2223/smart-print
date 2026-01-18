@@ -1,105 +1,133 @@
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import popupImg from "@/images/popup img.jpg";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "#services" },
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#contact" },
-  ];
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <div 
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate("/")}
-          >
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#005bb5] to-[#00c5ff] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg md:text-xl">SP</span>
+    <>
+      {/* HEADER */}
+      <header className="w-full bg-white shadow sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              <div className="w-10 h-10 bg-[#0aa5d9] rounded flex items-center justify-center text-white font-bold">
+                PC
+              </div>
+              <span className="font-bold text-lg text-gray-800">
+                PC Packard
+              </span>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg md:text-xl font-bold text-[#005bb5]">SmartPrint</h1>
-              <p className="text-[10px] md:text-xs text-gray-500 -mt-1">Tech Support Solutions</p>
-            </div>
-          </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Nav */}
+            <nav className="hidden md:flex gap-8 font-medium text-gray-700">
+              <a href="/">Home</a>
+              <a href="#about">About</a>
+              <a href="#service">Service</a>
+              <a href="#partner">Partner With Us</a>
+              <a href="#faq">FAQs</a>
+            </nav>
+
+            {/* Right */}
+            <div className="flex items-center gap-4">
               <a
-                key={link.label}
-                href={link.href}
-                className="text-gray-700 hover:text-[#005bb5] font-medium transition-colors"
+                href="tel:+18003424999"
+                className="hidden lg:flex items-center gap-2 text-[#0aa5d9] font-semibold"
               >
-                {link.label}
+                <Phone size={18} />
+                +1 (800) 342-4999
               </a>
-            ))}
-          </nav>
 
-          {/* Phone & CTA */}
-          <div className="flex items-center gap-3 md:gap-4">
-            <a
-              href="tel:+17602740601"
-              className="hidden lg:flex items-center gap-2 text-[#005bb5] font-bold"
-            >
-              <Phone className="w-5 h-5" />
-              <span>+1 (760) 274-0601</span>
-            </a>
-            <button
-              onClick={() => navigate("/setup")}
-              className="bg-gradient-to-r from-[#005bb5] to-[#00c5ff] text-white font-semibold py-2 px-4 md:py-2.5 md:px-6 rounded-full text-sm md:text-base hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              Get Support
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700" />
-              ) : (
-                <Menu className="w-6 h-6 text-gray-700" />
-              )}
-            </button>
+              <button
+                onClick={() => setOpen(true)}
+                className="border border-[#0aa5d9] text-[#0aa5d9] px-6 py-2 rounded-full font-semibold hover:bg-[#0aa5d9] hover:text-white transition"
+              >
+                Get In Touch
+              </button>
+            </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-gray-700 hover:text-[#005bb5] font-medium py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="tel:+17602740601"
-                className="flex items-center gap-2 text-[#005bb5] font-bold py-2"
-              >
-                <Phone className="w-5 h-5" />
-                <span>+1 (760) 274-0601</span>
-              </a>
-            </nav>
+      {/* POPUP MODAL */}
+      {open && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white w-full max-w-4xl rounded-lg overflow-hidden relative">
+            {/* Close */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-3 right-3 text-gray-600"
+            >
+              <X />
+            </button>
+
+            <div className="grid md:grid-cols-2">
+              {/* Image */}
+              <div className="hidden md:block">
+                <img
+                  src={popupImg}
+                  alt="Support"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Form */}
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-4">Need expert help?</h2>
+
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full border px-4 py-2 rounded"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full border px-4 py-2 rounded"
+                  />
+
+                  <select className="w-full border px-4 py-2 rounded">
+                    <option>-- Select Country --</option>
+                    <option>USA</option>
+                    <option>Canada</option>
+                  </select>
+
+                  <select className="w-full border px-4 py-2 rounded">
+                    <option>-- Support For --</option>
+                    <option>Computer</option>
+                    <option>Network</option>
+                    <option>WiFi</option>
+                    <option>Mobile</option>
+                  </select>
+
+                  <input
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    className="w-full border px-4 py-2 rounded"
+                  />
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#0aa5d9] text-white py-3 rounded font-semibold hover:bg-[#088bb7]"
+                  >
+                    Book Appointment
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+      )}
+    </>
   );
 };
 
