@@ -35,19 +35,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-100">
-                  Careers
-                </a>
+                <a className="hover:opacity-100">Careers</a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-100">
-                  Press Releases
-                </a>
+                <a className="hover:opacity-100">Press Releases</a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-100">
-                  Blog
-                </a>
+                <a className="hover:opacity-100">Blog</a>
               </li>
             </ul>
           </div>
@@ -56,14 +50,10 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Guide Links</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="#" className="hover:opacity-100">
-                  Help Center
-                </a>
+                <a className="hover:opacity-100">Help Center</a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-100">
-                  Live Chat
-                </a>
+                <a className="hover:opacity-100">Live Chat</a>
               </li>
               <li>
                 <a href="#" className="hover:opacity-100">

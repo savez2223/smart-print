@@ -29,20 +29,20 @@ const HomeHeader = () => {
             {/* Nav */}
             <nav className="hidden md:flex gap-8 font-medium text-gray-700">
               <a href="/">Home</a>
-              <a href="#about">About</a>
-              <a href="#service">Service</a>
-              <a href="#partner">Partner With Us</a>
-              <a href="#faq">FAQs</a>
+              <a href="about">About</a>
+              <a href="services">Service</a>
+              <a href="partner-with-us">Partner With Us</a>
+              <a href="faq">FAQs</a>
             </nav>
 
             {/* Right */}
             <div className="flex items-center gap-4">
               <a
-                href="tel:+18003424999"
+                href="tel:+17602740601"
                 className="hidden lg:flex items-center gap-2 text-[#0aa5d9] font-semibold"
               >
                 <Phone size={18} />
-                +1 (800) 342-4999
+                +1 (760) 274-0601
               </a>
 
               <button
