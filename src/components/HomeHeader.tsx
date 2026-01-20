@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Phone, X } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import popupImg from "@/images/popup img.jpg";
+import ContactPopup from "./ContactPopup";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
@@ -57,76 +57,7 @@ const HomeHeader = () => {
       </header>
 
       {/* POPUP MODAL */}
-      {open && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white w-full max-w-4xl rounded-lg overflow-hidden relative">
-            {/* Close */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-3 right-3 text-gray-600"
-            >
-              <X />
-            </button>
-
-            <div className="grid md:grid-cols-2">
-              {/* Image */}
-              <div className="hidden md:block">
-                <img
-                  src={popupImg}
-                  alt="Support"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Form */}
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">Need expert help?</h2>
-
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full border px-4 py-2 rounded"
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full border px-4 py-2 rounded"
-                  />
-
-                  <select className="w-full border px-4 py-2 rounded">
-                    <option>-- Select Country --</option>
-                    <option>USA</option>
-                    <option>Canada</option>
-                  </select>
-
-                  <select className="w-full border px-4 py-2 rounded">
-                    <option>-- Support For --</option>
-                    <option>Computer</option>
-                    <option>Network</option>
-                    <option>WiFi</option>
-                    <option>Mobile</option>
-                  </select>
-
-                  <input
-                    type="tel"
-                    placeholder="Enter your phone number"
-                    className="w-full border px-4 py-2 rounded"
-                  />
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#0aa5d9] text-white py-3 rounded font-semibold hover:bg-[#088bb7]"
-                  >
-                    Book Appointment
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <ContactPopup open={open} onClose={() => setOpen(false)} />
     </>
   );
 };
