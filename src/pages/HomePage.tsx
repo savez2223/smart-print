@@ -20,6 +20,7 @@ import {
   Star,
   ArrowUp,
 } from "lucide-react";
+import ContactPopup from "@/components/ContactPopup";
 import HomeHeader from "@/components/HomeHeader";
 import Footer from "@/components/Footer";
 import A1 from "@/images/1.png";
@@ -234,6 +235,7 @@ const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeStep, setActiveStep] = useState(1);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -290,10 +292,10 @@ const HomePage = () => {
                 {slide.description}
               </p>
               <Button
-                onClick={() => navigate("/setup")}
-                className="bg-white text-[#005bb5] hover:bg-gray-100 font-semibold py-6 px-8 text-base md:text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                onClick={() => setOpen(true)}
+                className="bg-white text-[#0aa5d9] hover:bg-gray-100 font-semibold py-6 px-8 text-base md:text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-105"
               >
-                Setup
+                Book Now
               </Button>
             </div>
           </div>
@@ -331,7 +333,7 @@ const HomePage = () => {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#005bb5] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0aa5d9] mb-4">
               Complete Device Assistance Personalized for You!
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
@@ -354,7 +356,7 @@ const HomePage = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#005bb5] mb-2">
+                  <h3 className="text-lg font-bold text-[#0aa5d9] mb-2">
                     {category.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
@@ -375,11 +377,11 @@ const HomePage = () => {
         <div className="container mx-auto px-4 md:px-6">
           {/* Heading */}
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0aa5d9] mb-4">
               How Can We Assist You Today?
             </h2>
 
-            <h3 className="text-lg md:text-xl font-semibold text-[#005bb5] mb-4">
+            <h3 className="text-lg md:text-xl font-semibold text-[#0aa5d9] mb-4">
               Reliable Technology Support for Your Home and Business
             </h3>
 
@@ -450,7 +452,10 @@ const HomePage = () => {
 
           {/* CTA */}
           <div className="flex justify-center mt-16">
-            <button className="bg-[#00c5ff] hover:bg-[#00a0d4] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all">
+            <button
+              className="bg-[#00c5ff] hover:bg-[#00a0d4] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all"
+              onClick={() => setOpen(true)}
+            >
               Get In Touch
             </button>
           </div>
@@ -514,14 +519,14 @@ const HomePage = () => {
         <div className="container mx-auto px-4 md:px-6">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0aa5d9] mb-4">
               Our Work Process
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-              We follow a structured approach to deliver reliable and scalable solutions.
+              We follow a structured approach to deliver reliable and scalable
+              solutions.
             </p>
           </div>
-
           {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
             {stepsData.map((step) => (
@@ -530,7 +535,7 @@ const HomePage = () => {
                 onClick={() => setActiveStep(step.id)}
                 className={`px-4 md:px-6 py-3 rounded-lg font-medium transition-all shadow text-sm md:text-base ${
                   activeStep === step.id
-                    ? "bg-[#0a1930] text-white"
+                    ? "bg-[#0aa5d9] text-white"
                     : "bg-[#06b6d4] text-white hover:opacity-90"
                 }`}
               >
@@ -538,7 +543,6 @@ const HomePage = () => {
               </button>
             ))}
           </div>
-
           {/* Content */}
           <div className="flex flex-col lg:flex-row items-stretch gap-8 max-w-6xl mx-auto">
             {/* Left Text (Slide Animation) */}
@@ -546,7 +550,7 @@ const HomePage = () => {
               key={activeStep}
               className="flex-1 bg-white rounded-xl shadow-lg p-6 md:p-8 animate-slideIn"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-[#005bb5] mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#0aa5d9] mb-4">
                 {stepsData.find((s) => s.id === activeStep)?.title}
               </h3>
 
@@ -589,7 +593,7 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#005bb5]/10 to-[#00c5ff]/8"></div>
 
         <div className="relative container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0aa5d9] mb-4">
             On-Site & Remote Support for Your Printer, WiFi, and Smart Devices
           </h2>
           <p className="text-base md:text-lg text-black/80 max-w-3xl mx-auto mb-8">
@@ -600,11 +604,11 @@ const HomePage = () => {
           </p>
 
           <Button
-            onClick={() => navigate("/setup")}
+            onClick={() => setOpen(true)}
             className="
         bg-white
-        text-[#005bb5]
-        border-2 border-[#005bb5]
+        text-[#0aa5d9]
+        border-2 border-[#0aa5d9]
         font-semibold
         py-6 px-8
         text-base md:text-lg
@@ -627,7 +631,7 @@ const HomePage = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1930] mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0aa5d9] mb-4">
               What Our Clients Say!
             </h2>
           </div>
@@ -695,7 +699,7 @@ const HomePage = () => {
       <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0a1930]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0aa5d9]">
               Our Partners
             </h2>
           </div>
@@ -707,64 +711,64 @@ const HomePage = () => {
               <img
                 src={P1}
                 alt="Partner 1"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
               <img
                 src={P2}
                 alt="Partner 2"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
               <img
                 src={P3}
                 alt="Partner 3"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
               <img
                 src={P4}
                 alt="Partner 4"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
               <img
                 src={P5}
                 alt="Partner 5"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
               <img
                 src={P6}
                 alt="Partner 6"
-                className="h-12 md:h-16 object-contain opacity-70 hover:opacity-100 transition"
+                className="h-12 md:h-16 object-contain transition"
               />
 
               {/* Duplicate set for smooth loop */}
               <img
                 src={P1}
                 alt="Partner 1"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain opacity-100"
               />
               <img
                 src={P2}
                 alt="Partner 2"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain opacity-100"
               />
               <img
                 src={P3}
                 alt="Partner 3"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain opacity-100"
               />
               <img
                 src={P4}
                 alt="Partner 4"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain opacity-100"
               />
               <img
                 src={P5}
                 alt="Partner 5"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain opacity-100"
               />
               <img
                 src={P6}
                 alt="Partner 6"
-                className="h-12 md:h-16 object-contain opacity-70"
+                className="h-12 md:h-16 object-contain"
               />
             </div>
           </div>
@@ -783,6 +787,9 @@ const HomePage = () => {
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
+
+      {/* POPUP MODAL */}
+      <ContactPopup open={open} onClose={() => setOpen(false)} />
     </div>
   );
 };

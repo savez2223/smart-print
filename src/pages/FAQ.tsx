@@ -95,15 +95,16 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-white">
       <HomeHeader />
-      
+
       <PageHeroBanner title="Frequently Asked Questions" breadcrumb="FAQ" />
-      
+
       <main className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           {/* Intro */}
           <div className="text-center mb-12">
             <p className="text-gray-600 text-lg">
-              Find answers to commonly asked questions about our services, support, and policies.
+              Find answers to commonly asked questions about our services,
+              support, and policies.
             </p>
           </div>
 
@@ -111,15 +112,17 @@ const FAQ = () => {
           <div className="space-y-10">
             {faqs.map((section, sectionIndex) => (
               <div key={sectionIndex}>
-                <h2 className="text-2xl font-bold text-[#005bb5] mb-4">{section.category}</h2>
+                <h2 className="text-2xl font-bold text-[#0aa5d9] mb-4">
+                  {section.category}
+                </h2>
                 <Accordion type="single" collapsible className="space-y-2">
                   {section.questions.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
+                    <AccordionItem
+                      key={index}
                       value={`${sectionIndex}-${index}`}
                       className="border border-gray-200 rounded-lg px-4"
                     >
-                      <AccordionTrigger className="text-left font-medium text-gray-800 hover:text-[#005bb5]">
+                      <AccordionTrigger className="text-left font-medium no-underline text-gray-800 hover:text-[#0aa5d9]">
                         {faq.q}
                       </AccordionTrigger>
                       <AccordionContent className="text-gray-600 leading-relaxed">
@@ -134,13 +137,16 @@ const FAQ = () => {
 
           {/* Still Have Questions */}
           <div className="mt-16 bg-gray-50 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-[#005bb5] mb-4">Still Have Questions?</h3>
+            <h3 className="text-2xl font-bold text-[#0aa5d9] mb-4">
+              Still Have Questions?
+            </h3>
             <p className="text-gray-600 mb-6">
-              Can't find what you're looking for? Our support team is here to help.
+              Can't find what you're looking for? Our support team is here to
+              help.
             </p>
-            <a 
-              href="tel:+1-800-XXX-XXXX" 
-              className="inline-flex items-center gap-2 bg-[#005bb5] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#004494] transition-colors"
+            <a
+              href="tel:+1-800-XXX-XXXX"
+              className="inline-flex items-center gap-2 bg-[#005bb5] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#0aa5d9] transition-colors"
             >
               Contact Support
             </a>

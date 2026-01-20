@@ -15,8 +15,6 @@ const FORM_CONFIG = {
     { value: "", label: "-- Select Country --" },
     { value: "usa", label: "USA" },
     { value: "canada", label: "Canada" },
-    { value: "uk", label: "United Kingdom" },
-    { value: "australia", label: "Australia" },
   ],
   supportOptions: [
     { value: "", label: "-- Support For --" },
@@ -37,7 +35,9 @@ const ContactPopup = ({ open, onClose }: ContactPopupProps) => {
     phone: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 

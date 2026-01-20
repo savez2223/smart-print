@@ -30,18 +30,22 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Get to know us</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="#" className="hover:opacity-100">
+                <a href="about" className="hover:opacity-100">
                   About us
                 </a>
               </li>
               <li>
+                <a href="/terms-and-conditions" className="hover:opacity-100">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="/privacy-policy" className="hover:opacity-100">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
                 <a className="hover:opacity-100">Careers</a>
-              </li>
-              <li>
-                <a className="hover:opacity-100">Press Releases</a>
-              </li>
-              <li>
-                <a className="hover:opacity-100">Blog</a>
               </li>
             </ul>
           </div>
@@ -117,8 +121,14 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-6 text-center text-sm opacity-90">
           <p>
-            © 2025 PC Packard. All rights reserved. | Privacy Policy | Terms &
-            Conditions
+            © 2025 PC Packard. All rights reserved. |{" "}
+            <a href="/privacy-policy" className="hover:bg-[#0aa5d9]">
+              Privacy Policy
+            </a>{" "}
+            |{" "}
+            <a href="/terms-and-conditions" className="hover:bg-[#0aa5d9]">
+              Terms & Conditions
+            </a>
           </p>
         </div>
       </div>
