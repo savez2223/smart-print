@@ -22,7 +22,7 @@ const HomeHeader = () => {
                 PC
               </div>
               <span className="font-bold text-lg text-gray-800">
-                PC Packard
+                PC-ConnectHUB
               </span>
             </div>
 
