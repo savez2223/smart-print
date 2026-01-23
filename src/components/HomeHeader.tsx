@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ContactPopup from "./ContactPopup";
+import Logo from "@/images/pc-logo-3.png";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
@@ -10,36 +11,48 @@ const HomeHeader = () => {
   return (
     <>
       {/* HEADER */}
-      <header className="w-full bg-white shadow sticky top-0 z-50">
+      <header className="w-full bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+          <div className="flex items-center justify-between h-24">
+            {/* LOGO */}
             <div
-              className="flex items-center gap-2 cursor-pointer"
               onClick={() => navigate("/")}
+              className="flex items-center cursor-pointer select-none"
             >
-              <div className="w-10 h-10 bg-[#0aa5d9] rounded flex items-center justify-center text-white font-bold">
-                PC
-              </div>
-              <span className="font-bold text-lg text-gray-800">
-                PC-ConnectHUB
-              </span>
+              <img
+                src={Logo}
+                alt="PC-ConnectHUB Logo"
+                className="h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              />
             </div>
 
-            {/* Nav */}
-            <nav className="hidden md:flex gap-8 font-medium text-gray-700">
-              <a href="/">Home</a>
-              <a href="about">About</a>
-              <a href="services">Service</a>
-              <a href="partner-with-us">Partner With Us</a>
-              <a href="faq">FAQs</a>
+            {/* NAV LINKS */}
+            <nav className="hidden md:flex items-center gap-10 font-medium text-gray-700 text-[15px]">
+              <a href="/" className="hover:text-[#0aa5d9] transition">
+                Home
+              </a>
+              <a href="/about" className="hover:text-[#0aa5d9] transition">
+                About
+              </a>
+              <a href="/services" className="hover:text-[#0aa5d9] transition">
+                Service
+              </a>
+              <a
+                href="/partner-with-us"
+                className="hover:text-[#0aa5d9] transition"
+              >
+                Partner With Us
+              </a>
+              <a href="/faq" className="hover:text-[#0aa5d9] transition">
+                FAQs
+              </a>
             </nav>
 
-            {/* Right */}
-            <div className="flex items-center gap-4">
+            {/* RIGHT SIDE */}
+            <div className="flex items-center gap-6">
               <a
                 href="tel:+17602740601"
-                className="hidden lg:flex items-center gap-2 text-[#0aa5d9] font-semibold"
+                className="hidden lg:flex items-center gap-2 text-[#0aa5d9] font-semibold text-sm"
               >
                 <Phone size={18} />
                 +1 (760) 274-0601
@@ -47,7 +60,8 @@ const HomeHeader = () => {
 
               <button
                 onClick={() => setOpen(true)}
-                className="border border-[#0aa5d9] text-[#0aa5d9] px-6 py-2 rounded-full font-semibold hover:bg-[#0aa5d9] hover:text-white transition"
+                className="border border-[#0aa5d9] text-[#0aa5d9] px-7 py-2.5 rounded-full 
+                font-semibold text-sm hover:bg-[#0aa5d9] hover:text-white transition-all duration-300"
               >
                 Get In Touch
               </button>

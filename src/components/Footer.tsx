@@ -1,5 +1,5 @@
 import FooterBG from "@/images/footer-bg.png";
-import Logo from "@/images/pc-logo-2.png"; // 👈 apna logo yaha import karo
+import Logo from "@/images/pc-logo-3.png"; // 👈 apna logo yaha import karo
 
 // badges
 import Sectigo from "@/images/f1.png";
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Logo + Text */}
           <div>
-            <img src={Logo} alt="PC-ConnectHUB Logo" className="h-14 mb-4" />
+            <img src={Logo} alt="PC-ConnectHUB Logo" className="h-20 mb-4" />
             <p className="text-sm opacity-90 leading-relaxed">
               Any Questions? We're here to help! Available between 9 AM – 8 PM
               CT, 7 days a week.
