@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Logo + Text */}
           <div>
-            <img src={Logo} alt="PC Packard Logo" className="h-14 mb-4" />
+            <img src={Logo} alt="PC-ConnectHUB Logo" className="h-14 mb-4" />
             <p className="text-sm opacity-90 leading-relaxed">
               Any Questions? We're here to help! Available between 9 AM – 8 PM
               CT, 7 days a week.
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-6 text-center text-sm opacity-90">
           <p>
-            © 2025 PC Packard. All rights reserved. |{" "}
+            © 2025 PC-ConnectHUB. All rights reserved. |{" "}
             <a href="/privacy-policy" className="hover:bg-[#0aa5d9]">
               Privacy Policy
             </a>{" "}

@@ -60,19 +60,19 @@ const heroSlides = [
     image: HBG1,
     title: "Quick and Accurate Computer Assistance",
     description:
-      "At PC Packard, we offer professional computer support services to ensure your system operates seamlessly. Our certified CompTIA A+ technicians provide prompt and efficient solutions for all your computer-related issues, whether it's slow performance, software installation, or virus removal. Your devices will remain secure, optimized, and prepared to fulfill your personal or business requirements.",
+      "At PC-ConnectHUB, we offer professional computer support services to ensure your system operates seamlessly. Our certified CompTIA A+ technicians provide prompt and efficient solutions for all your computer-related issues, whether it's slow performance, software installation, or virus removal. Your devices will remain secure, optimized, and prepared to fulfill your personal or business requirements.",
   },
   {
     image: HBG2,
     title: "Easy Printer Configuration",
     description:
-      "Enhance your printing experience with PC Packard expert printer configuration services. We provide comprehensive services, covering both wired and wireless configurations, cloud printing, and network configuration, to guarantee that your printer is installed and optimized for effortless operation. Obtain professional support for seamless printing, whether at home or in the office, ensuring your workflow remains uninterrupted.",
+      "Enhance your printing experience with PC-ConnectHUB expert printer configuration services. We provide comprehensive services, covering both wired and wireless configurations, cloud printing, and network configuration, to guarantee that your printer is installed and optimized for effortless operation. Obtain professional support for seamless printing, whether at home or in the office, ensuring your workflow remains uninterrupted.",
   },
   {
     image: HBG3,
     title: "Effortless WiFi Configuration for an Interconnected World",
     description:
-      "In the current digital landscape, having a dependable WiFi network is crucial for both residential and commercial settings. PC Packard provides thorough WiFi configuration services designed to guarantee rapid, secure, and seamless internet connectivity across your area. Whether you require a home network designed for seamless streaming or a powerful system for a busy office, our specialists will customize solutions to meet your specific requirements, improving your online experience and ensuring effortless connectivity.",
+      "In the current digital landscape, having a dependable WiFi network is crucial for both residential and commercial settings. PC-ConnectHUB provides thorough WiFi configuration services designed to guarantee rapid, secure, and seamless internet connectivity across your area. Whether you require a home network designed for seamless streaming or a powerful system for a busy office, our specialists will customize solutions to meet your specific requirements, improving your online experience and ensuring effortless connectivity.",
   },
 ];
 
@@ -128,22 +128,22 @@ const workProcessSteps = [
 
 const testimonials = [
   {
-    name: "PC PACKARD",
+    name: "PC-ConnectHUB",
     rating: 5,
-    text: "PC Packard had a positive experience. They help us with computer and printer-related problems with their excellent knowledge about every technology, always recommended to anyone needing tech support.",
+    text: "PC-ConnectHUB had a positive experience. They help us with computer and printer-related problems with their excellent knowledge about every technology, always recommended to anyone needing tech support.",
     source: "Google",
   },
   {
     name: "David Mukherjee",
     rating: 5,
-    text: "Setting up HP printer was a walk in park thanks to PC Packard. My new printer setup and now I am able to print anywhere in my home. Truly professional.",
+    text: "Setting up HP printer was a walk in park thanks to PC-ConnectHUB. My new printer setup and now I am able to print anywhere in my home. Truly professional.",
     time: "1 month ago",
     source: "Google",
   },
   {
     name: "Angela Sanchez",
     rating: 5,
-    text: "Had connection issues with my router. PC Packard fixed everything and now I'm enjoying high-speed internet. Very knowledgeable and patient with explaining everything in simple terms.",
+    text: "Had connection issues with my router. PC-ConnectHUB fixed everything and now I'm enjoying high-speed internet. Very knowledgeable and patient with explaining everything in simple terms.",
     time: "2 weeks ago",
     source: "Google",
   },
@@ -157,7 +157,7 @@ const testimonials = [
   {
     name: "Monica Sterling",
     rating: 5,
-    text: "I was struggling with a virus infection on my laptop. The team at PC Packard handled it expertly. They cleaned my system and set up protection to prevent future issues.",
+    text: "I was struggling with a virus infection on my laptop. The team at PC-ConnectHUB handled it expertly. They cleaned my system and set up protection to prevent future issues.",
     time: "2 months ago",
     source: "Google",
   },
@@ -597,7 +597,7 @@ const HomePage = () => {
             On-Site & Remote Support for Your Printer, WiFi, and Smart Devices
           </h2>
           <p className="text-base md:text-lg text-black/80 max-w-3xl mx-auto mb-8">
-            At PC Packard, we understand the crucial role that printers and
+            At PC-ConnectHUB, we understand the crucial role that printers and
             smart devices play in your daily operations. Our expert team is here
             to provide comprehensive support, whether you need assistance
             on-site or prefer the convenience of remote troubleshooting.
