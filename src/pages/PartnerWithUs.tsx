@@ -190,7 +190,7 @@ const PartnerWithUs = () => {
               how we can grow together.
             </p>
             <a
-              href="mailto:partners@smartprint.com"
+              href="mailto:partners@PC-Connect Hub.com"
               className="inline-flex items-center gap-2 bg-white text-[#0aa5d9] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
             >
               Contact Partnership Team

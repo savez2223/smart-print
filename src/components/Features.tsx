@@ -17,7 +17,7 @@ const features = [
     icon: Cloud,
     title: "Remote Business App Printing",
     description:
-      "Deploy Smart-Print alongside your business applications in the cloud to enable printing across local and remote printers, all within your trusted network.",
+      "Deploy PC-Connect Hub alongside your business applications in the cloud to enable printing across local and remote printers, all within your trusted network.",
   },
   {
     icon: Clock,
@@ -47,7 +47,7 @@ const features = [
     icon: Layers,
     title: "Scalable and Flexible",
     description:
-      "Smart-Print Smart Printer Setup evolves with your enterprise. It’s modular, authorizing you to add or subtract elements as your needs develop, and Guides both cloud deployments and on-premise.",
+      "PC-Connect Hub PC-Connect Hub Setup evolves with your enterprise. It’s modular, authorizing you to add or subtract elements as your needs develop, and Guides both cloud deployments and on-premise.",
   },
   {
     icon: Repeat,
@@ -73,7 +73,7 @@ const Features = () => {
             <span className="text-blue-600">Unravel Your Print Obstacles</span>
           </h2>
           <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">
-            New! Smart-Print Smart Printer Setup is prepared to address the
+            New! PC-Connect Hub PC-Connect Hub Setup is prepared to address the
             common obstacles that businesses face in their everyday printing
             work. If you want to connect remote offices, manage secure home
             printing, or allow printing across diverse networks, our software

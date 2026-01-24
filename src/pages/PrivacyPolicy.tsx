@@ -16,10 +16,11 @@ const PrivacyPolicy = () => {
                 1. Introduction
               </h2>
               <p className="mb-4">
-                At SmartPrint, we are committed to protecting your privacy and
-                ensuring the security of your personal information. This Privacy
-                Policy explains how we collect, use, disclose, and safeguard
-                your information when you visit our website or use our services.
+                At PC-Connect Hub, we are committed to protecting your privacy
+                and ensuring the security of your personal information. This
+                Privacy Policy explains how we collect, use, disclose, and
+                safeguard your information when you visit our website or use our
+                services.
               </p>
             </section>
 
@@ -208,7 +209,7 @@ const PrivacyPolicy = () => {
               <ul className="list-none space-y-2">
                 <li>
                   <strong className="text-[#0aa5d9]">Email:</strong>{" "}
-                  privacy@smartprint.com
+                  privacy@PC-Connect Hub.com
                 </li>
                 <li>
                   <strong className="text-[#0aa5d9]">Phone:</strong>{" "}

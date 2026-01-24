@@ -14,19 +14,19 @@ const FAQ = () => {
       category: "General Questions",
       questions: [
         {
-          q: "What services does SmartPrint provide?",
-          a: "SmartPrint provides comprehensive printer support services including setup, installation, troubleshooting, driver updates, wireless configuration, and ongoing maintenance for all major printer brands.",
+          q: "What services does PC-Connect Hub provide?",
+          a: "PC-Connect Hub provides comprehensive printer support services including setup, installation, troubleshooting, driver updates, wireless configuration, and ongoing maintenance for all major printer brands.",
         },
         {
           q: "What printer brands do you support?",
           a: "We support all major printer brands including HP, Canon, Epson, Brother, Lexmark, Samsung, Dell, Xerox, and many more. Our technicians are trained to handle any printer model.",
         },
         {
-          q: "Is SmartPrint affiliated with any printer manufacturer?",
-          a: "SmartPrint is an independent third-party technical support provider. We are not affiliated with any printer manufacturer unless explicitly stated.",
+          q: "Is PC-Connect Hub affiliated with any printer manufacturer?",
+          a: "PC-Connect Hub is an independent third-party technical support provider. We are not affiliated with any printer manufacturer unless explicitly stated.",
         },
         {
-          q: "How can I contact SmartPrint for support?",
+          q: "How can I contact PC-Connect Hub for support?",
           a: "You can reach us via our toll-free number available 24/7, through our website's live chat, or by sending an email to our support team.",
         },
       ],

@@ -62,7 +62,7 @@ const PrinterSetup = () => {
   ];
 
   const filtered = printerModels.filter((item) =>
-    item.toLowerCase().includes(query.toLowerCase())
+    item.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
@@ -166,7 +166,7 @@ const PrinterSetup = () => {
                       "Pro-level color control for eye-catching, vibrant prints",
                       "Intuitive design tools for effortless customization",
                       "Guides various file formats for maximum flexibility",
-                      "Smart print settings to save time, ink, and materials",
+                      "PC-Connect Hub settings to save time, ink, and materials",
                       "Frequent updates packed with new features and enhancements",
                     ].map((feature, index) => (
                       <li

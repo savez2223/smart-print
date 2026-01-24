@@ -33,7 +33,7 @@ const Disclaimer = () => {
                 Third-Party Independence
               </h2>
               <p className="mb-4">
-                SmartPrint is an independent third-party technical support
+                PC-Connect Hub is an independent third-party technical support
                 service provider. We are not affiliated with, endorsed by, or
                 sponsored by any printer manufacturer, including but not limited
                 to HP, Canon, Epson, Brother, Lexmark, Dell, Samsung, or Xerox,
@@ -86,9 +86,9 @@ const Disclaimer = () => {
               <p className="mb-4">
                 This website may contain links to external websites that are not
                 provided or maintained by, or in any way affiliated with,
-                SmartPrint. Please note that we do not guarantee the accuracy,
-                relevance, timeliness, or completeness of any information on
-                these external websites.
+                PC-Connect Hub. Please note that we do not guarantee the
+                accuracy, relevance, timeliness, or completeness of any
+                information on these external websites.
               </p>
             </section>
 
@@ -97,7 +97,7 @@ const Disclaimer = () => {
                 Limitation of Liability
               </h2>
               <p className="mb-4">
-                In no event shall SmartPrint, its directors, employees,
+                In no event shall PC-Connect Hub, its directors, employees,
                 partners, agents, suppliers, or affiliates be liable for any
                 indirect, incidental, special, consequential, or punitive
                 damages, including without limitation, loss of profits, data,
@@ -168,7 +168,7 @@ const Disclaimer = () => {
               </p>
               <ul className="list-none space-y-2">
                 <li>
-                  <strong>Email:</strong> legal@smartprint.com
+                  <strong>Email:</strong> contact@pcconnecthub.com
                 </li>
                 <li>
                   <strong>Phone:</strong> +1(760)-274-0601

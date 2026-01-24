@@ -26,7 +26,7 @@ const About = () => {
                   Who We Are
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  SmartPrint is a leading provider of professional printer
+                  PC-Connect Hub is a leading provider of professional printer
                   support and technical assistance services. With years of
                   experience in the industry, we have helped thousands of
                   customers resolve their printer-related issues quickly and

@@ -27,34 +27,35 @@ const PrintAnywhere = () => {
             </h3>
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-foreground font-medium">
               <p>
-                Smart Printer Setup is your all-in-one solution for fast, smooth
-                printing from any desktop, laptop, or mobile device to any
-                printer, no significance the network in between. It is created
-                to cater to homes and organizations of all sizes. Our software
-                delivers centralized management and is ideal for both simple and
-                complex workflows. Via Smart Printer Setup, you acquire the
-                flexibility to operate your printing services on-premise or in
-                the cloud, guaranteeing your printing demands are met now and in
-                the future.
+                PC-Connect Hub Setup is your all-in-one solution for fast,
+                smooth printing from any desktop, laptop, or mobile device to
+                any printer, no significance the network in between. It is
+                created to cater to homes and organizations of all sizes. Our
+                software delivers centralized management and is ideal for both
+                simple and complex workflows. Via PC-Connect Hub Setup, you
+                acquire the flexibility to operate your printing services
+                on-premise or in the cloud, guaranteeing your printing demands
+                are met now and in the future.
               </p>
               <p className="text-xs md:text-sm text-muted-foreground">
-                Smart-Print is a self-dependent solution provider for software
-                products. By downloading Smart Printer Guide, you agree to our{" "}
+                PC-Connect Hub is a self-dependent solution provider for
+                software products. By downloading PC-Connect Hub Guide, you
+                agree to our{" "}
                 <a
-                  href="https://pcpackard.com/privacy-policy"
+                  href="https://PC-Connect Hub.com/privacy-policy"
                   className="underline"
                 >
                   Privacy Policy
                 </a>
                 ,{" "}
                 <a
-                  href="https://pcpackard.com/terms-condition"
+                  href="https://PC-Connect Hub.com/terms-condition"
                   className="underline"
                 >
                   Terms and Conditions
                 </a>{" "}
                 and{" "}
-                <a href="https://pcpackard.com/eula" className="underline">
+                <a href="https://PC-Connect Hub.com/eula" className="underline">
                   EULA
                 </a>
                 . Complete access to management features and printer

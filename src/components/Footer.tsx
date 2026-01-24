@@ -75,7 +75,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li>Email: info@pcpackard.com</li>
+              <li>Email: info@PC-Connect Hub.com</li>
               <li>Hours: 9 AM – 8 PM CT</li>
               <li>Location: United States</li>
             </ul>
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="flex justify-center items-center gap-8 mb-8">
           {/* Sectigo */}
           <a
-            href="https://decoder.link/sslchecker/pcpackard.com/443"
+            href="https://decoder.link/sslchecker/PC-Connect Hub.com/443"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -99,7 +99,7 @@ const Footer = () => {
 
           {/* Safe Browsing */}
           <a
-            href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fpcpackard.com%2F&hl=en"
+            href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2FPC-Connect Hub.com%2F&hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >

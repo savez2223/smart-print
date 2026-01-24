@@ -10,7 +10,7 @@ const Disc = () => {
         <h1 className="text-2xl md:text-3xl font-bold mb-4">Disclaimer</h1>
 
         <p className="text-sm md:text-base lg:text-lg opacity-90 leading-relaxed">
-          Smart Printer is an independent company and is not affiliated,
+          PC-Connect Hub is an independent company and is not affiliated,
           associated, authorized, endorsed by, or in any way officially
           connected with any brand, company, or organization unless explicitly
           stated. All product and company names are trademarks™ or registered®

@@ -20,10 +20,10 @@ const TermsAndConditions = () => {
                 1. Introduction
               </h2>
               <p className="mb-4">
-                Welcome to SmartPrint. By accessing and using our website and
-                services, you agree to comply with and be bound by these terms
-                and conditions. Please read them carefully before using our
-                services.
+                Welcome to PC-Connect Hub. By accessing and using our website
+                and services, you agree to comply with and be bound by these
+                terms and conditions. Please read them carefully before using
+                our services.
               </p>
             </section>
 
@@ -32,8 +32,9 @@ const TermsAndConditions = () => {
                 2. Services Provided
               </h2>
               <p className="mb-4">
-                SmartPrint provides technical support services for printers and
-                related devices. Our services include but are not limited to:
+                PC-Connect Hub provides technical support services for printers
+                and related devices. Our services include but are not limited
+                to:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Printer setup and installation assistance</li>
@@ -69,7 +70,7 @@ const TermsAndConditions = () => {
               </h2>
               <p className="mb-4">
                 All content, trademarks, logos, and intellectual property on
-                this website are owned by SmartPrint or its licensors.
+                this website are owned by PC-Connect Hub or its licensors.
                 Unauthorized use, reproduction, or distribution of any materials
                 without prior written consent is strictly prohibited.
               </p>
@@ -92,7 +93,7 @@ const TermsAndConditions = () => {
                 6. Limitation of Liability
               </h2>
               <p className="mb-4">
-                SmartPrint shall not be liable for any indirect, incidental,
+                PC-Connect Hub shall not be liable for any indirect, incidental,
                 special, consequential, or punitive damages arising out of or
                 related to your use of our services. Our total liability shall
                 not exceed the amount paid by you for the services in question.
@@ -116,10 +117,10 @@ const TermsAndConditions = () => {
                 8. Third-Party Services
               </h2>
               <p className="mb-4">
-                SmartPrint is an independent technical support provider and is
-                not affiliated with any printer manufacturers unless explicitly
-                stated. We may recommend or use third-party software or
-                services, for which separate terms may apply.
+                PC-Connect Hub is an independent technical support provider and
+                is not affiliated with any printer manufacturers unless
+                explicitly stated. We may recommend or use third-party software
+                or services, for which separate terms may apply.
               </p>
             </section>
 
@@ -140,8 +141,8 @@ const TermsAndConditions = () => {
               </h2>
               <p className="mb-4">
                 These terms shall be governed by and construed in accordance
-                with the laws of the jurisdiction in which SmartPrint operates,
-                without regard to its conflict of law provisions.
+                with the laws of the jurisdiction in which PC-Connect Hub
+                operates, without regard to its conflict of law provisions.
               </p>
             </section>
 
@@ -156,7 +157,7 @@ const TermsAndConditions = () => {
               <ul className="list-none space-y-2">
                 <li>
                   <strong className="text-[#0aa5d9]">Email:</strong>{" "}
-                  support@smartprint.com
+                  support@PC-Connect Hub.com
                 </li>
                 <li>
                   <strong className="text-[#0aa5d9]">Phone:</strong>{" "}

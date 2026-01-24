@@ -4,7 +4,7 @@ import { Check, Shield, DollarSign, X, Headphones, Lock } from "lucide-react"; /
 
 const plans = [
   {
-    name: "Smart Printer Setup",
+    name: "PC-Connect Hub Setup",
     duration: "1-Year Subscription",
     device: "1 Device",
     price: "$12.99",
@@ -12,7 +12,7 @@ const plans = [
     popular: false,
   },
   {
-    name: "Smart Printer Setup",
+    name: "PC-Connect Hub Setup",
     duration: "2-Year Subscription",
     device: "2 Devices",
     price: "$12.99",
@@ -20,7 +20,7 @@ const plans = [
     popular: true,
   },
   {
-    name: "Smart Printer Setup",
+    name: "PC-Connect Hub Setup",
     duration: "5-Year Subscription",
     device: "5 Devices",
     price: "$12.99",
@@ -58,7 +58,7 @@ const Pricing = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Smart Printer <span className="text-accent">Setup Plans</span>
+            PC-Connect Hub <span className="text-accent">Setup Plans</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
