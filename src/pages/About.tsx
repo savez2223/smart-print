@@ -23,7 +23,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-[#0aa5d9] mb-6">
-                  Who We Are
+                  done done done
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   PC-Connect Hub is a leading provider of professional printer
